@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/pages/global.css">
+    <link rel="stylesheet" href="./src/css/pages/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,14 +16,14 @@
                 <li><a href="">Parcerias</a></li>
                 <li><a href="">Doações</a></li>
             </ul>
-            <a href=""><button>Cadastrar</button></a>
+            <button id="btn-cadastrar" onclick="clicado()">Cadastrar</button>
         </nav>
     </header>
     <main>
         <!-- Secao principal da nossa pagina -->
         <section class="hero-section">
             <div class="hero-container">
-                <div class="hero-content">
+                <article class="hero-content">
                     <h2 class="hero-title">Faça a Diferença Hoje!</h2>
                     <h3 class="hero-subtitle">Juntos, podemos transformar vidas!</h3>
                     <p class="hero-text">
@@ -30,13 +32,21 @@
                         ajuda a famílias vulneráveis, projetos ambientais e de proteção animal.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn-primary">Doar Agora</button>
-                        <button class="btn-secondary">Saber Mais</button>
+                        <button class="btn-doar primary">Doar Agora</button>
+                        <button class="btn-doar secondary">Saber Mais</button>
                     </div>
-                </div>
-                <div class="donation-icon">
-                    <img src="donation-icon.png" alt="Ícone de Doação" class="donation-image">
-                </div>
+                    <div id="hero-socials">
+                        <h1 id="socials-text">Siga-nos:</h1>
+                        
+                        <img src="./src/assets/images/linkedin.svg" alt="linkedin">
+                        <img src="./src/assets/images/facebook.svg" alt="facebook">
+                        <img src="./src/assets/images/whatsapp.svg" alt="whatsapp">
+                        <img src="./src/assets/images/instagram.svg" alt="instagram">
+                    </div>
+                </article>
+                <aside class="donation-icon">
+                    <img src="./src/assets/images/caixa-coracao.gif" alt="Ícone de Doação" class="donation-image">
+                </aside>
             </div>
         </section>
 
@@ -88,6 +98,6 @@
             </div>
         </section>
     </main>
-        
+    <script src="./src/js/scriptDom.js"></script>
 </body>
 </html>
