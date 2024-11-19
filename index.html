@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/pages/global.css">
     <link rel="stylesheet" href="./src/css/pages/style.css">
+    <!-- Adicionando Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>DonateHub</h1>
+        <a href="./index.html" id="title"><h1>DonateHub</h1></a>
         <nav>
             <ul>
                 <li><a href="">Sobre</a></li>
@@ -32,16 +34,15 @@
                         ajuda a famílias vulneráveis, projetos ambientais e de proteção animal.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn-doar primary">Doar Agora</button>
-                        <button class="btn-doar secondary">Saber Mais</button>
+                        <button class="btn-doar primary" id="donate" onclick="clicado2()">Doar Agora</button>
+                        <button class="btn-doar secondary"id="saber-mais" onclick="clicado3()">Saber Mais</button>
                     </div>
                     <div id="hero-socials">
                         <h1 id="socials-text">Siga-nos:</h1>
-                        
-                        <img src="./src/assets/images/linkedin.svg" alt="linkedin">
-                        <img src="./src/assets/images/facebook.svg" alt="facebook">
-                        <img src="./src/assets/images/whatsapp.svg" alt="whatsapp">
-                        <img src="./src/assets/images/instagram.svg" alt="instagram">
+                        <a href="www.linkedin.com" target="_blank"><img class="hero-icons" src="./src/assets/images/linkedin.svg" alt="linkedin"></a>
+                        <a href="facebook.com" target="_blank"><img class="hero-icons" src="./src/assets/images/facebook.svg" alt="facebook"></a>
+                        <a href="whatssapp.com" target="_blank"><img class="hero-icons" src="./src/assets/images/whatsapp.svg" alt="whatsapp"></a>
+                        <a href="instagram.com" target="_blank"><img class="hero-icons" src="./src/assets/images/instagram.svg" alt="instagram"></a>  
                     </div>
                 </article>
                 <aside class="donation-icon">
@@ -79,8 +80,8 @@
         </section>
 
         <section class="how-it-works">
-            <div class="container">
-                <h2 class="section-title">Como funciona</h2>
+            <div class="container2">
+                <h2 class="section-title section3">Como funciona</h2>
                 <div class="steps-container">
                     <div class="step">
                         <div class="step-number">1</div>
@@ -98,6 +99,36 @@
             </div>
         </section>
     </main>
+    <footer id="footer">
+        <div id="informacoes">
+
+            <div class="infos">
+                <h4>Endereço:</h4>
+                <p>Rua da Solidariedade, 123<br>Centro, São Paulo - SP, 01000-000<br>Brasil</p>
+            </div>
+
+            <div class="infos">
+                <h4>Informações de Contato:</h4>
+                <p>Telefone: +55 (11) 4002-8922<br>
+                E-mail: <a href="mailto:contato@donatehub.com.br" style="color: #fff; text-decoration: none;">contato@donatehub.com.br</a><br>
+                WhatsApp: +55 (11) 99999-8888</p>
+            </div>
+
+            <div class="infos" id="socials">
+                <h4>Siga-nos:</h4>
+                <div id="social-links">
+                    <a href="linkedin.com"><i class="bi bi-linkedin"></i></a>
+                    <a href=""><i class="bi bi-whatsapp"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright">
+            <p>DonateHub - Juntos, fazemos a diferença. © 2024 DonateHub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
     <script src="./src/js/scriptDom.js"></script>
 </body>
 </html>
