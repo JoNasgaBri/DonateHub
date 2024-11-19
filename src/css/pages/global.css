@@ -2,11 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root{
     --color1: #5856D6;
-    --color2: #A0F1A7;
-    --color3: #FF898B;
-    --color4: #E8EB93;
+    --color2: #9e93c8;
+    --color3: #f4ecff;
+    --color4: #6abaa4;
+    --color5: #d149bc;
+    --color6: #E8EB93;
+    --color7: #ff8a6a;
+    --color8: #A0F1A7;
+    --titulo: 4rem;
+    --subtitulo: 2rem;
+    --texto: 1.2rem;
 }
