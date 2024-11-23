@@ -1,6 +1,11 @@
 const clicado = () =>{
     const cor = document.getElementById(`btn-cadastrar`);
 
+    cor.addEventListener('click', () => {
+        // Redireciona para outra página
+        window.location.href = './pages/cadastro.html';
+    });
+
     const corOriginal = cor.style.backgroundColor;
     const corTextoOriginal = cor.style.color;
 
@@ -18,6 +23,11 @@ const clicado = () =>{
 const clicado2 = () =>{
     const cor = document.getElementById(`donate`);
 
+    cor.addEventListener('click', () => {
+        // Redireciona para outra página
+        window.location.href = './pages/doar.html';
+    });
+
     const corOriginal = cor.style.backgroundColor;
     const corTextoOriginal = cor.style.color;
 
@@ -34,6 +44,11 @@ const clicado2 = () =>{
 
 const clicado3 = () =>{
     const cor = document.getElementById(`saber-mais`);
+
+    cor.addEventListener('click', () => {
+        // Redireciona para outra página
+        window.location.href = './pages/sobre.html';
+    });
 
     const corOriginal = cor.style.backgroundColor;
     const corTextoOriginal = cor.style.color;
