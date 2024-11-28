@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+} */
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#title h1 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Seção de perfil */
+#profile {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+#profile h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+#profile p {
+    margin: 8px 0;
+}
+
+/* Seção de atividade recente */
+#activity {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+#activity h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+#activityList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#activityList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#activityList li:before {
+    content: "•";
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+/* Seção de notificações */
+#notifications {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+}
+
+#notifications h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.notification-badge {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+/* Rodapé */
+#footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#informacoes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infos {
+    margin: 20px;
+}
+
+.infos h4 {
+    margin-top: 0;
+}
+
+.infos p {
+    margin: 8px 0;
+}
+
+#socials a {
+    color: white;
+    margin: 0 8px;
+    font-size: 24px;
+}

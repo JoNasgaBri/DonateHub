@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/pages/global.css">
+    <link rel="stylesheet" href="../src/css/pages/dashboard.css">
+    <link rel="stylesheet" href="../src/css/pages/style.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Dashboard do Usuário</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" id="title"><h1>DonateHub</h1></a>
+        <nav>
+            <ul>
+                <li><a href="../pages/sobre.html">Sobre</a></li>
+                <li><a href="../pages/parcerias.html">Parcerias</a></li>
+                <li><a href="../pages/doacoes.html">Doações</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Informações do Perfil</h2>
+            <p>Bem-vindo, <span id="username">Nome do Usuário</span>!</p>
+            <p>Email: <span id="useremail">usuario@example.com</span></p>
+            <p>Membro desde: <span id="memberSince">Janeiro 2020</span></p>
+        </section>
+
+        <section id="activity">
+            <h2>Atividade Recente</h2>
+            <ul id="activityList">
+                <li>Login em 27 de Novembro de 2024</li>
+                <li>Atualizou informações do perfil</li>
+                <li>Alterou a senha</li>
+            </ul>
+        </section>
+
+        <section id="notifications">
+            <h2>Notificações</h2>
+            <p>Você tem 3 novas mensagens.</p>
+        </section>
+    </main>
+<!-- Footer -->
+    <footer id="footer">
+        <div id="informacoes">
+            <div class="infos">
+                <h4>Endereço:</h4>
+                <p>Rua da Solidariedade, 123<br>Centro, São Paulo - SP, 01000-000<br>Brasil</p>
+            </div>
+
+            <div class="infos">
+                <h4>Informações de Contato:</h4>
+                <p>Telefone: +55 (11) 4002-8922<br>
+                E-mail: <a href="mailto:contato@donatehub.com.br" id="email-contato">contato@donatehub.com.br</a><br>
+                WhatsApp: +55 (11) 99999-8888</p>
+            </div>
+
+            <div class="infos" id="socials">
+                <h4>Siga-nos:</h4>
+                <div id="social-links">
+                    <a class="final" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+                    <a class="final" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+                    <a class="final" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a class="final" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="copyright">
+            <p>DonateHub - Juntos, fazemos a diferença. © 2024 DonateHub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>
