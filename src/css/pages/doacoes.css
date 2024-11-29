@@ -1,0 +1,178 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: var(--color3);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Header */
+header {
+    background-color: var(--color1);
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#title h1 {
+    color: white;
+    font-size: 3.9rem !important; 
+    margin: 0;  
+    padding: 0; 
+}
+
+ul li {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+a {
+    color: white;
+}
+
+nav {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#btn-cadastrar {
+    background-color: var(--color8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: .8rem;
+    width: 7rem;
+    height: 2.5rem;
+    color: black;
+    font-weight: bold;
+    border: solid 2px black;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#btn-cadastrar:hover {
+    cursor: pointer;
+    transform: scale(.95);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover {
+    text-decoration: underline 2px var(--color7);
+}
+
+li > a {
+    font-size: 1.2rem;
+}
+
+
+/* Donation Section */
+.donation-section {
+    padding: 50px 0;
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.donation-section h2 {
+    font-size: var(--subtitulo);
+    margin-bottom: 30px;
+    color: var(--color1);
+}
+
+/* Donation Button */
+.btn-doar {
+    background-color: var(--color8);
+    color: black;
+    padding: .8rem 2rem;
+    border-radius: 25px;
+    border: solid 2px black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-doar:hover {
+    background-color: var(--color7);
+    transform: scale(0.95);
+}
+
+/* Cadastrar Button */
+.btn-cadastrar {
+    background-color: var(--color5); 
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid black; 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--color7); 
+    border: 2px solid black;  
+}
+
+/* Cards */
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color1); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .btn-doar, .btn-cadastrar {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .donation-section h2 {
+        font-size: 1.5rem;
+    }
+}
