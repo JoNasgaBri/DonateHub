@@ -149,11 +149,69 @@ li > a {
 }
 
 /* Footer */
-footer {
-    background-color: var(--color1); 
-    color: white;
-    padding: 20px;
+#footer{
+    width: 100vw;
+    height: 30rem;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: var(--texto);
+} 
+
+#socials{
+    width: 20rem;
+    height: 5rem;
+}
+
+.infos{
+    width: 20rem;
+    height: auto;
+    padding: 10px;
+    font-size: var(--texto);
+}
+
+#social-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+a, i{
+    font-size: var(--subtitulo);
+    color: #fff;
+}
+
+#informacoes{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#copyright{
     text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+i:hover{
+    color: var(--color8);
+    cursor: pointer;
+}
+
+.final:hover{
+    transform: scale(1.05);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#email-contato{
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--texto);
 }
 
 /* Responsividade */

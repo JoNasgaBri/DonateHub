@@ -1,3 +1,6 @@
+const parcerias = document.getElementById(`parcerias`);
+const sobre = document.getElementById(`sobre`);
+
 const clicado = () =>{
     const cor = document.getElementById(`btn-cadastrar`);
 
@@ -63,3 +66,6 @@ const clicado3 = () =>{
         cor.style.scale = 0.9;
     }, 500);
 }
+
+
+
