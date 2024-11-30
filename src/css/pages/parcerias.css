@@ -1,0 +1,178 @@
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+header{
+    background-color: var(--color1);
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#title{
+    text-decoration: none;
+}
+
+header > h1{
+    color: white;
+    font-size: 2rem;
+}
+
+ul li{
+    display: inline-block;
+    padding-right: 1rem;
+}
+a{
+    color: white;
+}
+
+nav{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#btn-cadastrar{
+    background-color: var(--color8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: .8rem;
+    width: 7rem;
+    height: 2.5rem;
+    color: black;
+    font-weight: bold;
+    border: solid 2px black;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#btn-cadastrar:hover{
+    cursor: pointer;
+    transform: scale(.95);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover{
+    text-decoration: underline 2px var(--color7);
+}
+
+li>a{
+    font-size: 1.2rem;
+}
+
+/* header */
+
+/* Imagens das empresas, aside, article */
+.imagens-empresas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aside-content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empresas{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-content{
+    width: 50%;
+    height: 100%;
+    background-color: pink;
+}
+
+#img-IBM{
+    width: 90%;
+    height: 90%;
+}
+
+/* Imagens das empresas, aside, article */
+
+/* footer */
+#footer{
+    width: 100vw;
+    height: 30rem;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    font-size: var(--texto);
+} 
+
+#socials{
+    width: 20rem;
+    height: 5rem;
+}
+
+.infos{
+    width: 20rem;
+    height: auto;
+    padding: 10px;
+    font-size: var(--texto);
+}
+
+#social-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+a, i{
+    font-size: var(--subtitulo);
+    color: #fff;
+}
+
+#informacoes{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#copyright{
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+i:hover{
+    color: var(--color8);
+    cursor: pointer;
+}
+
+.final:hover{
+    transform: scale(1.05);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#email-contato{
+    color: #fff;
+    text-decoration: none;
+    font-size: var(--texto);
+}
