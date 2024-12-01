@@ -1,0 +1,262 @@
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    /* Tirar depois */
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+
+header{
+    background-color: var(--color1);
+    height: 12vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+#title{
+    text-decoration: none;
+}
+
+header > h1{
+    color: white;
+    font-size: 2rem;
+}
+
+ul li{
+    display: inline-block;
+    padding-right: 1rem;
+}
+a{
+    color: white;
+}
+
+nav{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#btn-cadastrar{
+    background-color: var(--color8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: .8rem;
+    width: 7rem;
+    height: 2.5rem;
+    color: black;
+    font-weight: bold;
+    border: solid 2px black;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#btn-cadastrar:hover{
+    cursor: pointer;
+    transform: scale(.95);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:hover{
+    text-decoration: underline 2px var(--color7);
+}
+
+li>a{
+    font-size: var(--texto);
+}
+/* header */
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.section2{
+    width: 100vw;
+    height: 100vh;
+}
+
+#diferente{
+    background-image: url(/src/assets/images/criancas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+#texto-introducao{
+    color: white;
+    font-size: 6rem;
+}
+
+#texto-introducao{
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(2px);
+    padding: 2rem;
+}
+
+.aside-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-content{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    padding: 2rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aside-content{
+    width: 50%;
+    height: 100%;
+}
+
+#historia-content{
+    background-color: var(--color7);
+}
+
+#missao-content{
+    background-color: var(--color6);
+}
+
+#futuro-content{
+    background-color: var(--color5);
+}
+
+#objetivos-content{
+    background-color: var(--color4);
+}
+
+#section-fundadores{
+    background-color: pink;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+#cards-fundadores{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.texto-fundadores{
+    background-color: grey;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+}
+
+.cards{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards:hover{
+    transform: scale(1.02);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.descricao-conteudo{
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(2px);
+    color: white;
+}
+.descricao-conteudo:hover{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.288));
+}
+
+#fundador1{
+    background-image: url(/src/assets/images/marcos.jpg);
+}
+
+#fundador2{
+    background-image: url(/src/assets/images/ana.jpg);
+}
+
+#fundador3{
+    background-image: url(/src/assets/images/lucas.jpg);
+}
+
+#fundador4{
+    background-image: url(/src/assets/images/renata.jpg);
+}
+
+
+
+/* Adiconar o black mode depois */
+.black-mode{
+    width: 8%;
+    height: 80%;
+    background-color: var(--color1);
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.black-mode:hover{
+    border: dashed 1px white;
+    cursor: pointer;
+}
+
+.bi-brightness-high{
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.bi-moon{
+    color: white;
+    font-size: var(--texto);
+    display: inline;
+}
+
+.bi-moon:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.bi-brightness-high:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}
+  

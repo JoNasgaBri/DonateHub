@@ -1,12 +1,10 @@
-const parcerias = document.getElementById(`parcerias`);
-const sobre = document.getElementById(`sobre`);
 
 const clicado = () =>{
     const cor = document.getElementById(`btn-cadastrar`);
 
     cor.addEventListener('click', () => {
         // Redireciona para outra página
-        window.location.href = './pages/cadastro.html';
+        window.location.href = '../pages/cadastro.html';
     });
 
     const corOriginal = cor.style.backgroundColor;
@@ -67,5 +65,51 @@ const clicado3 = () =>{
     }, 500);
 }
 
+const titulo = document.getElementById(`title`);
+
+titulo.addEventListener(`click`, () =>{
+    titulo.style.color = `#e7e6e7`;
+});
+
+const navegacao = document.getElementsByClassName(`direcionar`);
+
+navegacao.addEventListener(`click`, () =>{
+    navegacao.style.color = `#e7e6e7`;
+    navegacao.style.textDecoration = `none`;
+});
 
 
+const blackMode = document.querySelector(`.bi-moon`);
+const whiteMode = document.querySelector(`.bi-brightness-high`); 
+blackMode.addEventListener("click", () => {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white"; 
+    blackMode.style.display = "none"; 
+    whiteMode.style.display = "inline";
+});
+
+
+whiteMode.addEventListener("click", () => {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black"; 
+    whiteMode.style.display = "none";
+    blackMode.style.display = "inline";
+});
+
+
+// const blackMode = document.getElementsByClassName(`bi-moon`);
+// const whiteMode = document.getElementsByClassName(`bi-brightness-high`);
+
+// blackMode.addEventListener(`click`, () =>{
+//     sobre.style.backgroundColor = 'black';
+//     blackMode.style.color = `black`;
+//     blackMode.style.display = `none`;
+//     whiteMode.style.display = `flex`;
+// });
+
+// whiteMode.addEventListener(`click`, () =>{
+//     sobre.style.backgroundColor = 'white';
+//     whiteMode.style.color = `black`;
+//     whiteMode.style.display = `none`;
+//     BlackMode.style.display = `flex`;
+// });
