@@ -67,5 +67,18 @@ const clicado3 = () =>{
     }, 500);
 }
 
+const titulo = document.getElementById(`title`);
+
+titulo.addEventListener(`click`, () =>{
+    titulo.style.color = `#e7e6e7`;
+});
+
+const navegacao = document.getElementsByClassName(`direcionar`);
+
+navegacao.addEventListener(`click`, () =>{
+    navegacao.style.color = `#e7e6e7`;
+    navegacao.style.textDecoration = `none`;
+});
+
 
 

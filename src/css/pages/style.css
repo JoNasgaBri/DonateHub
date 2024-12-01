@@ -134,7 +134,9 @@ li>a{
     height: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-direction: row;
     padding: 0;
     align-self: flex-start;
 }
