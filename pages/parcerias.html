@@ -10,26 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body id="parcerias">
-    <header>
-        <a href="../index.html" id="title"><h1>DonateHub</h1></a>
-        <nav>
+    <!-- header principal -->
+    <header id="header-principal">
+        <a href="../index.html" id="title"><h1 class="h1-header">DonateHub</h1></a>
+        <nav id="nav-principal">
             <ul>
-                <li><a href="../pages/sobre.html">Sobre</a></li>
-                <li><a href="../pages/parcerias.html">Parcerias</a></li>
-                <li><a href="../pages/doacoes.html">Doações</a></li>
+                <li><a class="links-header" href="../pages/sobre.html">Sobre</a></li>
+                <li><a class="links-header" href="../pages/parcerias.html">Parcerias</a></li>
+                <li><a class="links-header" href="../pages/doacoes.html">Doações</a></li>
             </ul>
             <button id="btn-cadastrar" onclick="clicado()">Cadastrar</button>
         </nav>
     </header>
+    <!-- header principal -->
 
+    <!-- header interna -->
     <header class="inner-nav">
         <nav id="page-nav">
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasfasf</p></a>
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasf</p></a>
+            <a href="#Facebok" class="direcionar"><p>Facebok</p></a>
+            <a href="#Apple" class="direcionar"><p>Apple</p></a>
+            <a href="#IBM" class="direcionar"><p>IBM</p></a>
+            <a href="#Google" class="direcionar"><p>Google</p></a>
         </nav>
     </header>
+    <!-- header interna -->
     
     <main>
         <section class="empresas" id="Facebok">
@@ -37,18 +41,18 @@
                 <img src="../src/assets/images/facebook.gif" alt="Imagem animada da logo da empresa Facebook" class="imagens-empresas">
             </aside>
             <article class="article-content">
-                <h1 class="article-title">dewdwfweq</h1>
-                <p>dsfsdfsdfsd</p>
+                <h1 class="article-title">Meta (Facebook): Conectando Pessoas ao Impacto Social</h1>
+                <p>A Meta apoia a DonateHub ao fornecer tecnologias avançadas para amplificar campanhas de doação e promover projetos sociais em escala global. Com a força de suas redes sociais, a Meta ajuda a dar visibilidade a iniciativas, conectando milhões de pessoas a causas que fazem a diferença.</p>
             </article>
         </section>
 
         <section class="empresas" id="Apple">
             <article class="article-content">
-                <h1 class="article-title">fsdfsdfsdfsd</h1>
-                <p>fsdfdsfsd</p>
+                <h1 class="article-title">Apple: Inovação e Solidariedade de Mãos Dadas</h1>
+                <p>Como parceira da DonateHub, a Apple contribui ativamente para a transformação social, financiando projetos que promovem educação tecnológica em comunidades vulneráveis. Além disso, a empresa incentiva seus funcionários a doarem, dobrando cada contribuição feita por eles, multiplicando o impacto das ações.</p>
             </article>
             <aside class="aside-content" id="apple-aside">
-                <img src="../src/assets/images/apple.png" alt="Imagem da logo da empresa Apple" class="imagens-empresas">
+                <img src="../src/assets/images/apple.png" alt="Imagem da logo da empresa Apple" id="img-Apple" class="imagens-empresas">
             </aside>
         </section>
 
@@ -57,11 +61,22 @@
                 <img src="../src/assets/images/IBM.png" id="img-IBM" alt="Imagem da logo da empresa IBM" class="imagens-empresas">
             </aside>
             <article class="article-content">
-                <h1 class="article-title">fsdfjslfjsakl</h1>
-                <p>fsdfdsfdsfsdf</p>
+                <h1 class="article-title">IBM: Inteligência Artificial para um Mundo Melhor</h1>
+                <p>A IBM traz sua expertise em inteligência artificial para a DonateHub, otimizando o algoritmo que conecta doadores e projetos sociais. A parceria também inclui programas de capacitação em tecnologia para jovens de comunidades apoiadas, preparando-os para o futuro do trabalho.</p>
             </article>
         </section>
+
+        <section class="empresas" id="Google">
+            <article class="article-content">
+                <h1 class="article-title">Google: Dados a Serviço da Solidariedade</h1>
+                <p>Como parceira da DonateHub, o Google oferece acesso às suas ferramentas de análise de dados e suporte técnico para otimizar campanhas. Além disso, colabora com o programa de visibilidade global, garantindo que projetos sociais locais sejam descobertos por doadores em qualquer parte do mundo.</p>
+            </article>
+            <aside class="aside-content" id="google-aside">
+                <img src="../src/assets/images/google.png" alt="Imagem da logo da empresa Google" id="img-Google" class="imagens-empresas">
+            </aside>
+        </section>
     </main>
+
     <footer id="footer">
         <div id="informacoes">
 
@@ -80,10 +95,10 @@
             <div class="infos" id="socials">
                 <h4>Siga-nos:</h4>
                 <div id="social-links">
-                    <a class="final" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
-                    <a class="final" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
-                    <a class="final" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                    <a class="final" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a class="final" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a class="final" href="https://web.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a class="final" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="final" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
         </div>
