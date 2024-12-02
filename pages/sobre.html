@@ -13,30 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body id="sobre">
-    <header>
-        <a href="../index.html" id="title"><h1>DonateHub</h1></a>
-        <nav>
+    <!-- header principal -->
+    <header id="header-principal">
+        <a href="../index.html" id="title"><h1 class="h1-header">DonateHub</h1></a>
+        <nav id="nav-principal">
             <ul>
-                <li><a href="../pages/sobre.html">Sobre</a></li>
-                <li><a href="../pages/parcerias.html">Parcerias</a></li>
-                <li><a href="../pages/doacoes.html">Doações</a></li>
+                <li><a class="links-header" href="../pages/sobre.html">Sobre</a></li>
+                <li><a class="links-header" href="../pages/parcerias.html">Parcerias</a></li>
+                <li><a class="links-header" href="../pages/doacoes.html">Doações</a></li>
             </ul>
-            <div class="black-mode">
-                <i class="bi-brightness-high"></i>
-                <i class="bi-moon"></i>
-            </div>
             <button id="btn-cadastrar" onclick="clicado()">Cadastrar</button>
         </nav>
     </header>
+    <!-- header principal -->
 
+    <!-- header interna -->
     <header class="inner-nav">
         <nav id="page-nav">
             <a href="#historia" class="direcionar"><p>História</p></a>
             <a href="#objetivos" class="direcionar"><p>Objetivos</p></a>
             <a href="#missao" class="direcionar"><p>Missão</p></a>
             <a href="#futuro" class="direcionar"><p>Futuro</p></a>
+            <a href="#section-fundadores" class="direcionar"><p>Fundadores</p></a>
         </nav>
     </header>
+    <!-- header interna -->
 
     <main>
         <section class="section2" id="diferente">
@@ -48,8 +49,8 @@
         <section class="section" id="historia">
             <article class="article-content" id="historia-content">
                 <h1>Começo de tudo</h1>
-                <p>A DonateHub nasceu de uma ideia simples, mas poderosa: conectar pessoas e empresas dispostas a ajudar com projetos sociais que realmente fazem a diferença. A startup foi criada por quatro jovens inovadores – Marcos Oliveira, Ana Ribeiro, Lucas Santos e Renata Souza – que acreditavam no potencial transformador da tecnologia quando aliada à solidariedade. Unidos por experiências pessoais de superação e pelo desejo de promover mudanças reais, eles combinaram suas habilidades para criar uma solução que empodera comunidades e simplifica o ato de doar.</p>
-                <p>Ao observar as dificuldades enfrentadas por projetos sociais na captação de recursos e a frustração de doadores em encontrar iniciativas confiáveis, os quatro cofundadores decidiram agir. Cada um trouxe sua perspectiva única: Renata, com sua visão estratégica e paixão por impacto social; Marcos, com sua expertise em desenvolvimento de sistemas robustos; Ana, com sua habilidade em criar experiências digitais inclusivas; e Lucas, com sua capacidade de usar dados para conectar pessoas de forma eficiente. Juntos, eles deram vida à DonateHub, uma plataforma inovadora que une quem quer doar com quem precisa, garantindo que cada contribuição gere impacto positivo e transparente.</p>
+                <p>A DonateHub nasceu com um objetivo claro: conectar pessoas e empresas dispostas a ajudar com projetos sociais que fazem a diferença. Fundada por quatro jovens inovadores – Marcos Oliveira, Ana Ribeiro, Lucas Santos e Renata Souza –, a startup combina tecnologia e solidariedade para empoderar comunidades e simplificar o ato de doar. Unidos por experiências de superação e o desejo de promover mudanças reais, eles criaram uma solução que torna cada contribuição mais eficiente e transparente.</p>
+                <p>Ao perceberem as dificuldades de projetos sociais na captação de recursos e a frustração dos doadores em encontrar iniciativas confiáveis, os cofundadores decidiram agir. Renata trouxe sua visão estratégica e paixão por impacto social; Marcos, sua expertise em sistemas robustos; Ana, sua habilidade em criar experiências digitais inclusivas; e Lucas, sua capacidade de usar dados para conectar pessoas. Assim, nasceu a DonateHub, uma plataforma inovadora que transforma doações em impacto real.</p>
             </article>
             <aside class="aside-content">
                 <img src="../src/assets/images/voluntariado.jpg" alt="" class="aside-img">
@@ -150,10 +151,10 @@
             <div class="infos" id="socials">
                 <h4>Siga-nos:</h4>
                 <div id="social-links">
-                    <a class="final" href="https://www.linkedin.com/"><i class="bi bi-linkedin"></i></a>
-                    <a class="final" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
-                    <a class="final" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
-                    <a class="final" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a class="final" href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a class="final" href="https://web.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a class="final" href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="final" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
         </div>

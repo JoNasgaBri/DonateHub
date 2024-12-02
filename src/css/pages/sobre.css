@@ -1,79 +1,11 @@
 body{
-    background-color: white;
+    background-color: var(--color3);
     height: 100vh;
     width: 100vw;
     /* Tirar depois */
     display: flex;
     flex-direction: column;
 }
-
-/* header */
-
-header{
-    background-color: var(--color1);
-    height: 12vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-#title{
-    text-decoration: none;
-}
-
-header > h1{
-    color: white;
-    font-size: 2rem;
-}
-
-ul li{
-    display: inline-block;
-    padding-right: 1rem;
-}
-a{
-    color: white;
-}
-
-nav{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-#btn-cadastrar{
-    background-color: var(--color8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    padding: .8rem;
-    width: 7rem;
-    height: 2.5rem;
-    color: black;
-    font-weight: bold;
-    border: solid 2px black;
-    font-size: 1.2rem;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
-}
-
-#btn-cadastrar:hover{
-    cursor: pointer;
-    transform: scale(.95);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-a:hover{
-    text-decoration: underline 2px var(--color7);
-}
-
-li>a{
-    font-size: var(--texto);
-}
-/* header */
 
 .section{
     width: 100vw;
@@ -97,7 +29,7 @@ li>a{
 }
 
 #texto-introducao{
-    color: white;
+    color: var(--cor-header);
     font-size: 6rem;
 }
 
@@ -119,7 +51,6 @@ li>a{
 .article-content{
     width: 50%;
     height: 100%;
-    background-color: aqua;
     padding: 2rem;
     text-align: justify;
     display: flex;
@@ -150,7 +81,6 @@ li>a{
 }
 
 #section-fundadores{
-    background-color: pink;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -164,7 +94,7 @@ li>a{
 }
 
 .texto-fundadores{
-    background-color: grey;
+    color: var(--cor-texto);
     width: 100%;
     height: 20%;
     display: flex;
@@ -184,11 +114,13 @@ li>a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
 }
 
 .cards:hover{
-    transform: scale(1.02);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* transform: scale(1.02); */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    width: 40%;
 }
 
 .descricao-conteudo{
@@ -197,10 +129,16 @@ li>a{
     height: auto;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0));
     backdrop-filter: blur(2px);
-    color: white;
+    color: var(--cor-header);
+    opacity: 0;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
 }
+
 .descricao-conteudo:hover{
     background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.288));
+    opacity: 100%;
+    cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
 }
 
 #fundador1{
@@ -219,44 +157,3 @@ li>a{
     background-image: url(/src/assets/images/renata.jpg);
 }
 
-
-
-/* Adiconar o black mode depois */
-.black-mode{
-    width: 8%;
-    height: 80%;
-    background-color: var(--color1);
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.black-mode:hover{
-    border: dashed 1px white;
-    cursor: pointer;
-}
-
-.bi-brightness-high{
-    color: white;
-    font-size: 1.5rem;
-    display: none;
-}
-
-.bi-moon{
-    color: white;
-    font-size: var(--texto);
-    display: inline;
-}
-
-.bi-moon:hover{
-    cursor: pointer;
-    transform: scale(0.95);
-}
-
-.bi-brightness-high:hover{
-    cursor: pointer;
-    transform: scale(0.95);
-}
-  
