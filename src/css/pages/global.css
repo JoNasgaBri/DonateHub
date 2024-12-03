@@ -21,6 +21,7 @@
     --texto: 1.2rem;
     --cor-texto: #1C1C1C;
     --cor-header: #F5F5F5;
+    --font-texto: "Sarala", sans-serif;;
 }
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
@@ -219,3 +220,13 @@ ul li{
 }
 
 /* header principal*/
+
+@media (max-width: 767px){
+    #nav-principal{
+        display: none;
+    }
+
+    .h1-header{
+        font-size: 2.5rem;
+    }
+}
