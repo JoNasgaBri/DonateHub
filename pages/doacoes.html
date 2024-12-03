@@ -25,46 +25,48 @@
     <!-- header principal -->
 
     <!-- header interna -->
-    <header class="inner-nav">
-        <nav id="page-nav">
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasfasf</p></a>
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasf</p></a>
-        </nav>
-    </header>
+    <!-- <nav class="inner-nav">
+        <a href="" class="direcionar"><p>fasfas</p></a>
+        <a href="" class="direcionar"><p>fasfasfasf</p></a>
+        <a href="" class="direcionar"><p>fasfas</p></a>
+        <a href="" class="direcionar"><p>fasfasf</p></a>
+    </nav> -->
     <!-- header interna -->
 
     <main>
-        <section class="donation-section">
-            <div class="container">
-                <h2 class="section-title">Escolha um Projeto para Doar</h2>
-                <div class="projects">
-                    <div class="project-card">
-                        <h3 class="project-title">Projeto 1</h3>
-                        <p class="project-description">Descrição do projeto 1. Ajude a mudar vidas!</p>
-                        <button class="btn-doar">Doar</button>
+        <!-- Carrossel -->
+        <section class="carousel-container">
+            <div class="carousel">
+                <div class="slide active" style="background-image: url('../src/assets/images/alimentacao.jpg');">
+                    <div class="slide-content">
+                        <h2>Projeto Alimentação</h2>
+                        <p>Ajude a alimentar quem precisa. Sua contribuição faz toda a diferença.</p>
+                        <button class="donate-button">Doar</button>
                     </div>
-                    <div class="project-card">
-                        <h3 class="project-title">Projeto 2</h3>
-                        <p class="project-description">Descrição do projeto 2. Faça a diferença!</p>
-                        <button class="btn-doar">Doar</button>
+                </div>
+                <div class="slide" style="background-image: url('../src/assets/images/educacao.png');">
+                    <div class="slide-content">
+                        <h2>Projeto Educação</h2>
+                        <p>Contribua para levar educação a quem mais precisa.</p>
+                        <button class="donate-button">Doar</button>
                     </div>
-                    <div class="project-card">
-                        <h3 class="project-title">Projeto 3</h3>
-                        <p class="project-description">Descrição do projeto 3. Sua doação pode transformar vidas!</p>
-                        <button class="btn-doar">Doar</button>
+                </div>
+                <div class="slide" style="background-image: url('../src/assets/images/projeto3.jpg');">
+                    <div class="slide-content">
+                        <h2>Projeto Saúde</h2>
+                        <p>Ajude a melhorar a saúde de comunidades carentes.</p>
+                        <button class="donate-button">Doar</button>
                     </div>
                 </div>
             </div>
+            <button class="prev-btn">&#8249;</button>
+            <button class="next-btn">&#8250;</button>
         </section>
+        <!-- Carrossel -->
     </main>
-    
-    
-    
+
     <footer id="footer">
         <div id="informacoes">
-
             <div class="infos">
                 <h4>Endereço:</h4>
                 <p>Rua da Solidariedade, 123<br>Centro, São Paulo - SP, 01000-000<br>Brasil</p>
@@ -94,5 +96,6 @@
     </footer>
 
     <script src="../src/js/scriptDom.js"></script>
+    <script src="../src/js/carousel.js"></script>
 </body>
 </html>
