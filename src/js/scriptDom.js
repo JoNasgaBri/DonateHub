@@ -1,79 +1,56 @@
+import { User } from './user.js';
 
-const clicado = () =>{
-    const cor = document.getElementById(`btn-cadastrar`);
+// Manipulação do formulário de cadastro
+document.addEventListener('DOMContentLoaded', () => {
+    const formCadastro = document.getElementById('form');
+    if (formCadastro) {
+        formCadastro.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const cep = document.getElementById('cep').value;
+            const cpf = document.getElementById('cpf').value;
 
-    cor.addEventListener('click', () => {
-        // Redireciona para outra página
-        window.location.href = '../pages/cadastro.html';
-    });
+            // Criar e salvar usuário
+            const user = new User(nome, email, telefone, cep, cpf);
+            user.save();
 
-    const corOriginal = cor.style.backgroundColor;
-    const corTextoOriginal = cor.style.color;
+            // Redirecionar para a página de perfil com os dados
+            window.location.href = `perfil.html?nome=${encodeURIComponent(nome)}&telefone=${encodeURIComponent(telefone)}&email=${encodeURIComponent(email)}&cep=${encodeURIComponent(cep)}&cpf=${encodeURIComponent(cpf)}`;
+        });
+    }
 
-    cor.style.backgroundColor = `#48f156`;
-    cor.style.color = `black`;
-    cor.style.transition = `.5s`;
+    // Função para lidar com o botão de cadastro na página inicial
+    const clicado = () => {
+        const cor = document.getElementById(`btn-cadastrar`);
+        if (cor) {
+            cor.addEventListener('click', () => {
+                const corOriginal = cor.style.backgroundColor;
+                const corTextoOriginal = cor.style.color;
 
-    setTimeout(() => {
-        cor.style.backgroundColor = corOriginal;
-        cor.style.color = corTextoOriginal;
-        cor.style.scale = 0.9;
-    }, 500);
-}
+                cor.style.backgroundColor = `#48f156`;
+                cor.style.color = `black`;
+                cor.style.transition = `.5s`;
 
-const clicado2 = () =>{
-    const cor = document.getElementById(`donate`);
+                setTimeout(() => {
+                    cor.style.backgroundColor = corOriginal;
+                    cor.style.color = corTextoOriginal;
+                    window.location.href = '../pages/cadastro.html';
+                }, 500);
+            });
+        }
+    }
 
-    cor.addEventListener('click', () => {
-        // Redireciona para outra página
-        window.location.href = './pages/doar.html';
-    });
+    // Verifica se o usuário está logado e oculta o botão de cadastro
+    // const user = User.load();
+    // if (user) {
+    //     const btnCadastrar = document.getElementById('btn-cadastrar');
+    //     if (btnCadastrar) {
+    //         btnCadastrar.style.display = 'none'; // Oculta o botão
+    //     }
+    // }
 
-    const corOriginal = cor.style.backgroundColor;
-    const corTextoOriginal = cor.style.color;
-
-    cor.style.backgroundColor = `#48f156`;
-    cor.style.color = `black`;
-    cor.style.transition = `.5s`;
-
-    setTimeout(() => {
-        cor.style.backgroundColor = corOriginal;
-        cor.style.color = corTextoOriginal;
-        cor.style.scale = 0.9;
-    }, 500);
-}
-
-const clicado3 = () =>{
-    const cor = document.getElementById(`saber-mais`);
-
-    cor.addEventListener('click', () => {
-        // Redireciona para outra página
-        window.location.href = './pages/sobre.html';
-    });
-
-    const corOriginal = cor.style.backgroundColor;
-    const corTextoOriginal = cor.style.color;
-
-    cor.style.backgroundColor = `#5856D6`;
-    cor.style.color = `white`;
-    cor.style.transition = `.5s`;
-
-    setTimeout(() => {
-        cor.style.backgroundColor = corOriginal;
-        cor.style.color = corTextoOriginal;
-        cor.style.scale = 0.9;
-    }, 500);
-}
-
-const titulo = document.getElementById(`title`);
-
-titulo.addEventListener(`click`, () =>{
-    titulo.style.color = `#e7e6e7`;
-});
-
-const navegacao = document.getElementsByClassName(`direcionar`);
-
-navegacao.addEventListener(`click`, () =>{
-    navegacao.style.color = `#e7e6e7`;
-    navegacao.style.textDecoration = `none`;
+    clicado();
 });
