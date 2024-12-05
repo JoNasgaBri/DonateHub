@@ -64,8 +64,8 @@ body {
 /* Carousel Section */
 .carousel-container {
     position: relative;
-    width: 90%; /* Ajuste para ocupar mais espaço */
-    max-width: 1200px; /* Limite máximo de largura */
+    width: 90%;
+    max-width: 1200px;
     margin: 50px auto;
     overflow: hidden;
     border-radius: 10px;
@@ -79,22 +79,22 @@ body {
 
 .slide {
     min-width: 100%;
-    height: 500px; /* Aumentando a altura da box */
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     background-size: cover;
     background-position: center;
     position: relative;
-    background-image: url("/src/assets/images/alimentacao.jpg"); /* Caminho da imagem */
+    background-image: url("/src/assets/images/alimentacao.jpg");
 }
 
-/* Ajuste da margem da descrição do slide */
+
 .slide-content {
-    margin-left: 50px; /* Aumenta o espaço à esquerda do conteúdo */
+    margin-left: 50px; 
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    max-width: 50%; /* Para que o texto não ocupe todo o espaço */
+    max-width: 50%;
 }
 
 .donate-button {
@@ -151,6 +151,6 @@ body {
     }
 
     .slide {
-        height: 300px; /* Ajustando para telas menores */
+        height: 300px;
     }
 }
