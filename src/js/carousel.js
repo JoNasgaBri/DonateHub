@@ -1,13 +1,13 @@
-// Captura os elementos do carrossel e os botões de navegação
+// Captura os elementos do carrosse
 const carousel = document.querySelector('.carousel');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-// Variável para controlar o índice do slide ativo
+// Variável para controlar o índice
 let currentIndex = 0;
 
-// Função para atualizar o carrossel com base no índice atual
+// Função para atualizar o carrossel
 function updateCarousel() {
     const totalSlides = slides.length;
 
@@ -18,7 +18,6 @@ function updateCarousel() {
         currentIndex = 0;
     }
 
-    // Calcula o deslocamento necessário para mostrar o slide correto
     const offset = -currentIndex * 100;
 
     // Atualiza a posição do carrossel
