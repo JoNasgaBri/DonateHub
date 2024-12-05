@@ -3,3 +3,43 @@ body{
     height: 100vh;
 }
 
+#valor{
+    display: grid;
+    padding: 4px;
+    margin: 20PX;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pagamento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    gap: 5px; 
+    padding: 10px;
+  }
+  .pagamento button{
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: cadetblue;
+    height: 50%;
+    width: 50%;
+}
+.b1{
+    display: flex;
+    border-radius: 60px;
+    margin-top: 20px;
+    margin: 40px;
+    padding: 5px 10px;
+    gap: 10px;
+    background-color: aqua;
+    cursor: pointer;
+    font-size: 17px;
+    
+}
+#umes{
+    display: flex;
+}
+.umes p{
+    align-items: center;
+    justify-content: center;
+}
