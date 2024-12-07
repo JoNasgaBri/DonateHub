@@ -1,4 +1,3 @@
-// User.js
 export class User {
     constructor(name, email, phone, cep, cpf) {
         this.name = name;
@@ -19,12 +18,13 @@ export class User {
             createdAt: this.createdAt
         };
         localStorage.setItem('userData', JSON.stringify(userData));
+        localStorage.setItem('usuarioCadastrado', 'true');
     }
 
     static load() {
         try {
             const data = localStorage.getItem('userData');
-            if (data) {
+            if (data && localStorage.getItem('usuarioCadastrado') === 'true') {
                 const userData = JSON.parse(data);
                 const user = new User(
                     userData.name,
@@ -40,5 +40,15 @@ export class User {
             console.error('Erro ao carregar os dados do usuário:', error);
         }
         return null;
+    }
+
+    static clear() {
+        try {
+            localStorage.removeItem('userData');
+            localStorage.removeItem('usuarioCadastrado');
+            localStorage.removeItem('userActivities');
+        } catch (error) {
+            console.error('Erro ao limpar dados do usuário:', error);
+        }
     }
 }
