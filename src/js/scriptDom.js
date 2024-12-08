@@ -82,8 +82,8 @@ function handleCadastroButton() {
     if (!btnCadastrar) return;
 
     // Definir cores originais explicitamente
-    btnCadastrar.style.backgroundColor = '#A0F1A7'; // cor original do CSS
-    btnCadastrar.style.color = '#1C1C1C'; // cor original do CSS
+    btnCadastrar.style.backgroundColor = '#A0F1A7'; 
+    btnCadastrar.style.color = '#1C1C1C'; 
 
     btnCadastrar.addEventListener('click', () => {
         // Salvar cores originais
@@ -186,47 +186,12 @@ function setupSubmenuEvents() {
     });
 }
 
-// Função para carregar os dados do usuário no perfil
-function loadUserProfile() {
-    const profileSection = document.getElementById('profile');
-    if (profileSection) {
-        const userData = JSON.parse(localStorage.getItem('userData'));
-        if (userData) {
-            profileSection.innerHTML = `
-                <h2>Perfil do Usuário</h2>
-                <div class="info-item">
-                    <strong>Nome:</strong>
-                    <span>${userData.name}</span>
-                </div>
-                <div class="info-item">
-                    <strong>Email:</strong>
-                    <span>${userData.email}</span>
-                </div>
-                <div class="info-item">
-                    <strong>Telefone:</strong>
-                    <span>${userData.phone}</span>
-                </div>
-                <div class="info-item">
-                    <strong>CEP:</strong>
-                    <span>${userData.cep}</span>
-                </div>
-                <div class="info-item">
-                    <strong>CPF:</strong>
-                    <span>${userData.cpf}</span>
-                </div>
-            `;
-        }
-    }
-}
-
-
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
     handleCadastroButton();
     setupSubmenuEvents();
     loadUserData();
     checkUserState();
-    loadUserProfile();
     
     // Setup do formulário de cadastro
     const formCadastro = document.getElementById('form');
