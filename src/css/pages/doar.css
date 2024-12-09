@@ -1,9 +1,9 @@
 body{
     width: 100vw;
-    height: 100vh;
+    height: 100vh;   
 }
 
-#valor{
+/* #valor{
     display: grid;
     padding: 4px;
     margin: 20PX;
@@ -38,8 +38,70 @@ body{
 }
 #umes{
     display: flex;
-}
-.umes p{
-    align-items: center;
+} */
+
+
+#donation{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
+
+#pjt-selection{
+    width: 50%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+#cont-pag{
+    width: 50%;
+    height: 100%;
+    background-color: pink;
+}
+
+#container-img{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+
+#img{
+    width: 100%;
+    height: 100%;
+}
+
+#transition{
+    width: 100%;
+    height: 50%;
+    background-color: yellow;
+}
+
+#card-pag{
+    width: 100%;
+    height: 80%;
+    background-color: purple;
+}
+/* section{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    align-items: center; 
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+aside{
+    width: 100%;
+    height: 50%;
+    background-color: black;
+}
+ article{
+    width: 50%;
+    height: 100%;
+    background-color: aliceblue;
+ } */
