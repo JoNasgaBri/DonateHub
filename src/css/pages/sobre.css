@@ -157,3 +157,291 @@ body{
     background-image: url(/src/assets/images/renata.jpg);
 }
 
+
+/* Responsividade para telas de até 1024px (tablets e telas maiores) */
+@media (max-width: 1024px) {
+    /* Ajustes no corpo da página */
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    /* Ajuste para .section */
+    .section {
+        flex-direction: column; /* Empilhar os elementos verticalmente */
+        height: auto; /* Ajusta a altura */
+        padding: 1rem; /* Ajuste do espaçamento */
+    }
+
+    .section2 {
+        height: auto;
+    }
+
+    /* Ajuste para o texto de introdução */
+    #texto-introducao {
+        font-size: 3rem; /* Reduz o tamanho do texto */
+        padding: 1.5rem;
+    }
+
+    /* Ajuste nas imagens do aside */
+    .aside-img {
+        width: 100%;
+        height: 60%; /* Ajuste a altura das imagens */
+        object-fit: cover;
+    }
+
+    /* Ajuste para o conteúdo do artigo */
+    .article-content {
+        width: 100%; /* O artigo ocupa toda a largura da tela */
+        padding: 1rem; /* Reduz o padding */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .aside-content {
+        width: 100%; /* O aside ocupa toda a largura da tela */
+    }
+
+    /* Ajuste para os cards */
+    #cards-fundadores {
+        flex-direction: column; /* Empilhar os cards */
+        width: 100%; /* Os cards ocupam toda a largura */
+    }
+
+    .cards {
+        width: 100%; /* Ajusta a largura dos cards */
+        height: auto; /* Ajusta a altura dos cards */
+        justify-content: center; /* Centraliza os itens */
+        transition: none; /* Remove a animação */
+    }
+
+    .cards:hover {
+        width: 100%; /* Remove a animação de hover */
+    }
+
+    /* Ajuste para o fundo dos cards */
+    .descricao-conteudo {
+        opacity: 1;
+        padding: 1rem; /* Reduz o padding */
+        font-size: 0.9rem; /* Ajuste no tamanho da fonte */
+    }
+}
+
+/* Responsividade para telas de até 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+    /* Ajustes no corpo */
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Ajustes para a seção principal */
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .section2 {
+        height: auto;
+    }
+
+    /* Ajuste no texto de introdução */
+    #texto-introducao {
+        font-size: 2rem; /* Diminui o tamanho do texto */
+        padding: 1rem;
+    }
+
+    /* Ajuste nas imagens do aside */
+    .aside-img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    /* Ajuste no conteúdo do artigo */
+    .article-content {
+        width: 100%; /* A largura ocupa 100% da tela */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .aside-content {
+        width: 100%;
+    }
+
+    /* Ajustes nos cards de fundadores */
+    #cards-fundadores {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .cards:hover {
+        width: 100%;
+    }
+
+    /* Ajuste nas descrições dos cards */
+    .descricao-conteudo {
+        padding: 1rem;
+        opacity: 1;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para telas de até 480px (celulares) */
+@media (max-width: 480px) {
+    /* Ajuste geral no layout */
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajustes na seção principal */
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .section2 {
+        height: auto;
+    }
+
+    /* Ajuste no texto de introdução */
+    #texto-introducao {
+        font-size: 1.5rem; /* Fontes ainda menores para celular */
+        padding: 1rem;
+    }
+
+    /* Ajuste nas imagens do aside */
+    .aside-img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    /* Ajuste no conteúdo do artigo */
+    .article-content {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .aside-content {
+        width: 100%;
+    }
+
+    /* Ajustes nos cards de fundadores */
+    #cards-fundadores {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .cards:hover {
+        width: 100%;
+    }
+
+    /* Ajuste nas descrições dos cards */
+    .descricao-conteudo {
+        padding: 1rem;
+        opacity: 1;
+        font-size: 0.9rem;
+    }
+}
+/* Responsividade para telas de até 480px (celulares) */
+@media (max-width: 480px) {
+    /* Ajuste geral no layout */
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Ajustes na seção principal */
+    .section {
+        flex-direction: column; /* Empilhar os elementos verticalmente */
+        height: auto;
+        padding: 1rem;
+    }
+
+    .section2 {
+        height: auto;
+    }
+
+    /* Ajuste no texto de introdução */
+    #texto-introducao {
+        font-size: 1.5rem; /* Diminui ainda mais o tamanho do texto */
+        padding: 1rem;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Ajuste nas imagens do aside */
+    .aside-img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    /* Ajuste no conteúdo do artigo */
+    .article-content {
+        width: 100%; /* A largura ocupa 100% da tela */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .aside-content {
+        width: 100%;
+    }
+
+    /* Ajustes nos cards de fundadores */
+    #cards-fundadores {
+        flex-direction: column; /* Empilha os cards */
+        width: 100%; /* Ocupa 100% da largura */
+    }
+
+    .cards {
+        width: 100%; /* Ajusta a largura dos cards */
+        height: auto; /* Ajusta a altura dos cards */
+        justify-content: center;
+        padding: 0.5rem; /* Ajusta o espaçamento interno */
+    }
+
+    .cards:hover {
+        width: 100%; /* Remove o efeito de hover de ampliar os cards */
+    }
+
+    /* Ajuste nas descrições dos cards */
+    .descricao-conteudo {
+        padding: 1rem;
+        opacity: 1;
+        font-size: 0.8rem; /* Diminui o tamanho do texto para caber melhor */
+    }
+
+    /* Ajustes nas imagens de fundo dos fundadores */
+    #fundador1, #fundador2, #fundador3, #fundador4 {
+        background-size: cover;
+        background-position: center;
+        height: 150px; /* Ajusta a altura das imagens */
+    }
+}

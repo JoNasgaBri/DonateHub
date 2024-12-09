@@ -56,4 +56,150 @@ body{
     object-position: center;
 }
 
+/* Responsividade para telas menores que 1024px (Tablets e dispositivos médios) */
+@media (max-width: 1024px) {
+    .empresas {
+        flex-direction: column; /* Empilhar os elementos para telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .aside-content, .article-content {
+        width: 90%; /* Ampliar o conteúdo para telas menores */
+        margin: 1rem 0; /* Ajustar o espaçamento entre os itens */
+    }
+
+    .article-content {
+        padding: 1.5rem; /* Menos padding em telas menores */
+    }
+
+    #img-IBM, #img-Google {
+        width: 80%; /* Ajustar as imagens para não ficarem tão grandes */
+        height: auto;
+    }
+}
+
+/* Responsividade para telas menores que 768px (Dispositivos móveis) */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .empresas {
+        flex-direction: column; /* Empilhar os itens para dispositivos móveis */
+        height: auto;
+    }
+
+    .aside-content, .article-content {
+        width: 90%; /* Ajustar a largura para caber melhor nas telas pequenas */
+        margin: 1rem 0;
+    }
+
+    .article-content {
+        text-align: center; /* Centralizar o texto em telas pequenas */
+        padding: 1rem; /* Menos padding para economizar espaço */
+    }
+
+    .imagens-empresas {
+        width: 100%; /* Ajustar a largura da imagem para o tamanho da tela */
+        height: auto;
+        object-fit: contain;
+    }
+
+    #img-IBM, #img-Google {
+        width: 100%; /* Garantir que as imagens fiquem responsivas */
+        height: auto;
+    }
+}
+/* Responsividade para telas menores que 1024px (Tablets e dispositivos médios) */
+@media (max-width: 1024px) {
+    .empresas {
+        flex-direction: column; /* Empilhar os elementos para telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .aside-content, .article-content {
+        width: 90%; /* Ampliar o conteúdo para telas menores */
+        margin: 1rem 0; /* Ajustar o espaçamento entre os itens */
+    }
+
+    .article-content {
+        padding: 1.5rem; /* Menos padding em telas menores */
+    }
+
+    #img-IBM, #img-Google {
+        width: 80%; /* Ajustar as imagens para não ficarem tão grandes */
+        height: auto;
+    }
+}
+
+/* Responsividade para telas menores que 768px (Dispositivos móveis maiores) */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .empresas {
+        flex-direction: column; /* Empilhar os itens para dispositivos móveis */
+        height: auto;
+    }
+
+    .aside-content, .article-content {
+        width: 90%; /* Ajustar a largura para caber melhor nas telas pequenas */
+        margin: 1rem 0;
+    }
+
+    .article-content {
+        text-align: center; /* Centralizar o texto em telas pequenas */
+        padding: 1rem; /* Menos padding para economizar espaço */
+    }
+
+    .imagens-empresas {
+        width: 100%; /* Ajustar a largura da imagem para o tamanho da tela */
+        height: auto;
+        object-fit: contain;
+    }
+
+    #img-IBM, #img-Google {
+        width: 100%; /* Garantir que as imagens fiquem responsivas */
+        height: auto;
+    }
+}
+
+/* Responsividade para telas menores que 480px (Celulares) */
+@media (max-width: 480px) {
+    body {
+        background-color: var(--color3); /* Garantir o fundo adequado em dispositivos pequenos */
+    }
+
+    .empresas {
+        flex-direction: column; /* Empilhar as seções verticalmente */
+        height: auto;
+    }
+
+    .aside-content, .article-content {
+        width: 100%; /* Ocupa toda a largura da tela */
+        padding: 1rem;
+        margin: 0.5rem 0; /* Menor espaçamento para telas pequenas */
+    }
+
+    .article-content {
+        text-align: center; /* Centralizar conteúdo */
+        padding: 0.8rem; /* Reduzir o padding para otimizar espaço */
+    }
+
+    .imagens-empresas {
+        width: 100%; /* Imagens ocupando toda a largura disponível */
+        height: auto;
+        object-fit: contain; /* Para não deformar a imagem */
+    }
+
+    #img-IBM, #img-Google {
+        width: 90%; /* Ajustar as imagens para se adaptarem ao tamanho */
+        height: auto;
+        margin-bottom: 1rem; /* Separar as imagens para não ficarem coladas */
+    }
+}
+
 /* Imagens das empresas, aside, article */
