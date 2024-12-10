@@ -157,3 +157,76 @@ body{
     background-image: url(/src/assets/images/renata.jpg);
 }
 
+/* Responsividade para Tablet e Celular */
+@media screen and (max-width: 1024px) {
+    /* Ajustes gerais para tablet */
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .aside-content,
+    .article-content {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #texto-introducao {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+
+    #cards-fundadores {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cards {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .descricao-conteudo {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Ajustes específicos para celular */
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    #texto-introducao {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .cards {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .descricao-conteudo {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #diferente {
+        background-position: center;
+        background-size: contain;
+    }
+
+    .aside-img {
+        height: auto;
+    }
+}
