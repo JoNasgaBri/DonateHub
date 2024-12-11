@@ -58,13 +58,14 @@ body{
 #dscp-title {
     color:  #5856D6;
     padding-left: 2vh;
-    font-size: 36px;
-    
+    font-size: 39px;   
 }
+
 #description p{
-    padding: 4px; 
+    padding: 20px; 
 
 }
+
 #description select{
     padding: 4px; 
     margin-bottom: 20px;
@@ -112,6 +113,25 @@ body{
     width: 100%;
     height: 90%;
 object-fit: cover;
+}
+
+#description h2{
+font-size: 28px;
+padding: 29px;
+}
+#description select{
+  height: 50px;
+  width: 35%;
+  border-radius: 30px;
+  
+}
+#selec{
+margin-left: 30%;
+background-color: #ddcbf7b4;
+}
+
+aside select{
+    align-items: center;
 }
 
 #transition{
