@@ -12,6 +12,21 @@ class Dashboard {
             // Atualiza as informações no perfil
             const profileSection = document.getElementById('profile');
             if (profileSection) {
+                // Calcula o total doado
+                const totalDonated = this.user.donations ? this.user.donations.reduce((total, donation) => total + donation.value, 0) : 0;
+                const formattedTotal = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalDonated);
+
+                // Cria o HTML do histórico de doações
+                const donationHistory = this.user.donations && this.user.donations.length > 0
+                    ? this.user.donations.map(donation => `
+                        <div class="donation-item">
+                            <span class="donation-value">${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(donation.value)}</span>
+                            <span class="donation-project">${donation.project}</span>
+                            <span class="donation-date">${new Date(donation.date).toLocaleDateString('pt-BR')}</span>
+                        </div>
+                    `).join('')
+                    : '<p>Nenhuma doação realizada ainda.</p>';
+
                 profileSection.innerHTML = `
                     <h2>Perfil do Usuário</h2>
                     <div class="info-item">
@@ -33,6 +48,18 @@ class Dashboard {
                     <div class="info-item">
                         <strong>CPF:</strong>
                         <span>${this.user.cpf}</span>
+                    </div>
+
+                    <div class="donations-section">
+                        <h3>Minhas Doações</h3>
+                        <div class="total-donated">
+                            <strong>Total Doado:</strong>
+                            <span>${formattedTotal}</span>
+                        </div>
+                        <div class="donation-history">
+                            <h4>Histórico de Doações</h4>
+                            ${donationHistory}
+                        </div>
                     </div>
                 `;
             }

@@ -89,7 +89,8 @@ input:focus{
     outline: none;
 }
 
-#btn-submit{
+#btn-submit {
+    text-align: center; /* Center the text within the button */
     width: 8rem;
     height: 3rem;
     transition: cubic-bezier(0,.98,1,0) 1s;

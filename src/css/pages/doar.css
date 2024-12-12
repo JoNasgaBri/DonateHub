@@ -1,256 +1,292 @@
-body{
+body {
     width: 100vw;
     height: 100vh;   
 }
 
-/* #valor{
-    display: grid;
-    padding: 4px;
-    margin: 20PX;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.pagamento {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto); 
-    gap: 5px; 
-    padding: 10px;
-  }
-  .pagamento button{
-    cursor: pointer;
-    border-radius: 50px;
-    background-color: cadetblue;
-    height: 50%;
-    width: 50%;
-}
-.b1{
-    display: flex;
-    border-radius: 60px;
-    margin-top: 20px;
-    margin: 40px;
-    padding: 5px 10px;
-    gap: 10px;
-    background-color: aqua;
-    cursor: pointer;
-    font-size: 17px;
-    
-}
-#umes{
-    display: flex;
-} */
-
-
-#donation{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+/* Header Styles */
+#header-principal {
+    background-color: #4B44F4;
+    padding: 1rem;
 }
 
-#pjt-selection{
-    width: 50%;
+.links-header {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+}
+
+/* Main layout */
+#donation {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Left side */
+#pjt-selection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#container-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#img {
+    width: 100%;
     height: 100%;
-    background-color: rgb(255, 255, 255);
-}
-#dscp-title {
-    color:  #5856D6;
-    padding-left: 2vh;
-    font-size: 39px;   
-}
-
-#description p{
-    padding: 20px; 
-
-}
-
-#description select{
-    padding: 4px; 
-    margin-bottom: 20px;
-    font-size: 20px;
-    
-}
-#description select{
-    padding: 4px; 
-    margin-bottom: 20px;
-    font-size: 20px;
-    
-}
-/* ESTILIZAÇÃO DIREITA CADEADO */
-#cont-pag {
-    width: 50%;
-    height: 100%;
-    background-color: rgb(216, 216, 216);
-    font-size: 5px;
-    object-fit: center;
-   
-}
-#cade{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-#cade h1{
-    margin: 0;
-        font-size: 25px;
-        padding: 9px;
-        
-        
-}
-#cadeado{
-    height: 40px;
-    width: 40px;
     object-fit: cover;
-    
 }
 
-#container-img{
+#description h1 {
+    color: #4B44F4;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#description p {
+    color: #4a4a4a;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+#selec {
     width: 100%;
-    height: 50%;
-}
-
-#img{
-    width: 100%;
-    height: 90%;
-object-fit: cover;
-}
-
-#description h2{
-font-size: 28px;
-padding: 29px;
-}
-#description select{
-  height: 50px;
-  width: 35%;
-  border-radius: 30px;
-  
-}
-#selec{
-margin-left: 30%;
-background-color:rgb(216, 216, 216);
-}
-
-aside select{
-    align-items: center;
-}
-
-#transition{
-    width: 100%;
-    height: 50%;
-    background-color: yellow;
-}
-#transition h1{
-    font-size: 60px;
-}
-
-#card-pag{
-    width: 100%;
-    height: 80%;
-    background-color: rgb(216, 216, 216);
-    position: relative;
-    top: -30px;
-}
-#card-pag{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto); 
-    gap: 5px; 
-    padding: 90px;
-
-}
-
-.pagamento button{
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
     cursor: pointer;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    height: 60%;
-    width: 90px;
-    font-size: 15px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.8rem;
 }
-.pagamento {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto); 
-    gap: 20px; 
-    padding: 20px;
-    
-  }
-  
-  
-/* botao duplo */
+
+/* Right side */
+#cont-pag {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+}
+
+#cade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
+.progress-container h3 {
+    color: #4B44F4;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.progress {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #4B44F4;
+    transition: width 0.6s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    text-align: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
 .container {
     display: flex;
-    background-color: rgb(255, 255, 255);
-    width: 310px;
-    border-radius: 50px;
-    font-size: 17px;
-    margin-left: 16vh;
-    padding: 0.9rem;
-    justify-content: center;
-    gap: 1rem;
-    box-shadow: 2px 3px #3a3939;
-    position: relative;
-    z-index: 1;
-    
-  }
-  
-  .container::before {
-    content: "";
-    width: 1px;
-    height: 20px;
-    background-color: black;
-    position: absolute;
-    left: 50%; 
-    top: 50%; 
-    transform: translate(-50%, -50%); 
-  }
-  
-  .left,
-  .right {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .left {
-    border-radius: 50px 0 0 50px;
-  }
-  
-  .right {
-    border-radius: 0 50px 50px 0;
-  }
-  
-  .left:hover,
-  .right:hover {
-    background-color:rgb(216, 216, 216);
-    cursor: pointer;
-  }
-  
- 
-/* section{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 100vh;
-    align-items: center; 
+    background-color: #f8f9fa;
+    border-radius: 30px;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
 }
-img{
-    width: 100%;
-    height: 100%;
-}
-aside{
-    width: 100%;
-    height: 50%;
-    background-color: black;
-}
- article{
-    width: 50%;
-    height: 100%;
-    background-color: aliceblue;
- } */
 
- 
+.left, .right {
+    flex: 1;
+    padding: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.left:hover, .right:hover {
+    background-color: #4B44F4;
+    color: #fff;
+}
+
+.left.active, .right.active {
+    background-color: #4B44F4;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagamento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Enhanced Button Styles */
+.pagamento button {
+    padding: 1.2rem;
+    border: 2px solid #4B44F4;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #4B44F4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagamento button:hover {
+    background-color: #4B44F4;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(75, 68, 244, 0.2);
+}
+
+.pagamento button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(75, 68, 244, 0.2);
+}
+
+/* Move donation section to bottom */
+.btn-enviar {
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+#insert-value {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#insert-value input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#insert-value input:focus {
+    border-color: #4B44F4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(75, 68, 244, 0.1);
+}
+
+#doar {
+    width: 100%;
+    padding: 1.2rem 2.5rem;
+    background-color: #4B44F4;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(75, 68, 244, 0.2);
+}
+
+#doar:hover {
+    background-color: #3a3a9a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(75, 68, 244, 0.3);
+}
+
+#doar:active {
+    background-color: #2a2a6a;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(75, 68, 244, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #donation {
+        flex-direction: column;
+    }
+    
+    #container-img {
+        height: 300px;
+    }
+
+    #cont-pag {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagamento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #description h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #donation {
+        padding: 1rem;
+    }
+    
+    .pagamento {
+        grid-template-columns: 1fr;
+    }
+    
+    .pagamento button {
+        width: 100%;
+    }
+
+    #cont-pag {
+        min-height: 400px;
+    }
+}

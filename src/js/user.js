@@ -6,6 +6,7 @@ export class User {
         this.cep = cep;
         this.cpf = cpf;
         this.createdAt = new Date();
+        this.donations = [];
     }
 
     save() {
@@ -15,7 +16,8 @@ export class User {
             phone: this.phone,
             cep: this.cep,
             cpf: this.cpf,
-            createdAt: this.createdAt
+            createdAt: this.createdAt,
+            donations: this.donations
         };
         localStorage.setItem('userData', JSON.stringify(userData));
         localStorage.setItem('usuarioCadastrado', 'true');
@@ -34,6 +36,7 @@ export class User {
                     userData.cpf
                 );
                 user.createdAt = new Date(userData.createdAt);
+                user.donations = userData.donations || [];
                 return user;
             }
         } catch (error) {
