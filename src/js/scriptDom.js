@@ -55,34 +55,6 @@ function loadUserData() {
     }
 }
 
-
-
-// Função para salvar o estado do usuário após o cadastro
-function handleFormSubmit(event) {
-    event.preventDefault();
-    
-    try {
-        // Captura dados do formulário
-        const nome = document.getElementById('nome').value;
-        const telefone = document.getElementById('telefone').value;
-        const email = document.getElementById('email').value;
-        const cep = document.getElementById('cep').value;
-        const cpf = document.getElementById('cpf').value;
-
-        // Criar e salvar usuário
-        const user = new User(nome, email, telefone, cep, cpf);
-        user.save();
-
-        // Marcar usuário como cadastrado
-        localStorage.setItem('usuarioCadastrado', 'true');
-
-        // Redirecionar para página de perfil
-        window.location.href = `perfil.html?nome=${encodeURIComponent(nome)}&telefone=${encodeURIComponent(telefone)}&email=${encodeURIComponent(email)}&cep=${encodeURIComponent(cep)}&cpf=${encodeURIComponent(cpf)}`;
-    } catch (error) {
-        console.error('Erro no cadastro:', error);
-        alert('Erro ao realizar cadastro. Tente novamente.');
-    }
-}
 // Função atualizada para manipular os botões de cadastro
 function handleCadastroButton() {
     const btnCadastrar = document.getElementById('btn-cadastrar');
@@ -91,10 +63,6 @@ function handleCadastroButton() {
 
     buttons.forEach(btn => {
         if (!btn) return;
-
-        // Definir cores originais explicitamente
-        btn.style.backgroundColor = '#A0F1A7'; 
-        btn.style.color = '#1C1C1C'; 
 
         btn.addEventListener('click', () => {
             // Salvar cores originais
@@ -109,12 +77,15 @@ function handleCadastroButton() {
             setTimeout(() => {
                 btn.style.backgroundColor = corOriginal;
                 btn.style.color = corTextoOriginal;
-                window.location.href = './pages/cadastro.html';
+                
+                // Determina o caminho correto baseado na localização atual
+                const isInPagesDirectory = window.location.pathname.includes('/pages/');
+                const cadastroPath = isInPagesDirectory ? 'cadastro.html' : 'pages/cadastro.html';
+                window.location.href = cadastroPath;
             }, 500);
         });
     });
 }
-
 
 function checkUserState() {
     const btnCadastrar = document.getElementById('btn-cadastrar');
@@ -171,8 +142,9 @@ function setupSubmenuEvents() {
         editarPerfilLink.addEventListener('click', (e) => {
             e.preventDefault();
             // Determinar o caminho correto baseado na localização atual
-            const path = window.location.pathname.includes('/pages/') ? './perfil.html' : './pages/perfil.html';
-            window.location.href = path;
+            const isInPagesDirectory = window.location.pathname.includes('/pages/');
+            const perfilPath = isInPagesDirectory ? 'perfil.html' : 'pages/perfil.html';
+            window.location.href = perfilPath;
         });
     }
 
@@ -185,9 +157,8 @@ function setupSubmenuEvents() {
             localStorage.removeItem('userActivities');
             
             // Determinar o caminho correto para a página inicial
-            const homePath = window.location.pathname.includes('/pages/') ? '../index.html' : './index.html';
-            
-            // Redirecionar para a página inicial
+            const isInPagesDirectory = window.location.pathname.includes('/pages/');
+            const homePath = isInPagesDirectory ? '../index.html' : 'index.html';
             window.location.href = homePath;
         });
     }
@@ -262,6 +233,8 @@ const doarButton = document.querySelectorAll('.donate');
 
 doarButton.forEach(button => {
     button.addEventListener('click', () => {
-        window.location.href = './pages/doar.html';
+        const isInPagesDirectory = window.location.pathname.includes('/pages/');
+        const doarPath = isInPagesDirectory ? 'doar.html' : 'pages/doar.html';
+        window.location.href = doarPath;
     });
 });
