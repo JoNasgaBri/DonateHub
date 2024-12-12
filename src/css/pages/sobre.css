@@ -21,11 +21,13 @@ body{
     height: 100vh;
 }
 
-#diferente{
-    background-image: url(/src/assets/images/criancas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: blur(10px);
+#back-criancas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
 }
 
 #texto-introducao{
@@ -110,7 +112,6 @@ body{
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    gap: 1rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,37 +125,27 @@ body{
 }
 
 .descricao-conteudo{
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
+    background-color: black;
     height: auto;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0));
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0)); */
     backdrop-filter: blur(2px);
     color: var(--cor-header);
-    opacity: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    /* opacity: 0; */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 
 .descricao-conteudo:hover{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.288));
-    opacity: 100%;
     cursor: pointer;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 
-#fundador1{
-    background-image: url(/src/assets/images/marcos.jpg);
-}
-
-#fundador2{
-    background-image: url(/src/assets/images/ana.jpg);
-}
-
-#fundador3{
-    background-image: url(/src/assets/images/lucas.jpg);
-}
-
-#fundador4{
-    background-image: url(/src/assets/images/renata.jpg);
+.fundo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Responsividade para Tablet e Celular */
