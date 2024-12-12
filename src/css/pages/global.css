@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -164,6 +165,7 @@ button{
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    position: relative;
 }
 
 #title{
@@ -328,4 +330,80 @@ nav ul li {
     font-weight: 600;
 }
 
+.mobile-menu-icon {
+    display: none;
+}
 
+.mobile-menu-icon img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color1);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#btn-cadastrar-mobile {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.8rem;    
+    background-color: var(--color8);
+    border-radius: 25px;
+    color: var(--cor-texto);
+    font-weight: bold;
+    border: solid 2px black;
+    font-size: var(--texto);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 730px) {
+    #nav-principal {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-menu .links-header {
+        color: var(--cor-header);
+        font-size: var(--texto);
+        padding: 0.8rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    #btn-cadastrar-mobile {
+        width: 80%;
+        padding: 0.8rem;
+        background-color: var(--color8);
+        border-radius: 25px;
+        color: var(--cor-texto);
+        font-weight: bold;
+        border: solid 2px black;
+        font-size: var(--texto);
+        box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+        margin-top: 0.5rem;
+    }
+
+    #btn-cadastrar{
+        display: block;
+    }
+}
