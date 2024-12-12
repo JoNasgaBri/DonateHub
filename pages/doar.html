@@ -55,36 +55,37 @@
      </nav>
     
     </header>
- 
-
-    <!-- header interna -->
-    <header class="inner-nav">
-        <nav id="page-nav">
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasfasf</p></a>
-            <a href="" class="direcionar"><p>fasfas</p></a>
-            <a href="" class="direcionar"><p>fasfasf</p></a>
-        </nav>
-    </header>
   
-        <section id="donation">
+    <section id="donation">
         <aside id="pjt-selection">
             <div id="container-img">
-                <img src="" alt="" id="img">
+                <img src="../src/assets/images/refugiados.jpg" alt="" id="img">
             </div>
     
             <div id="description">
-                <h1 id="dscp-title">Voce pode fazer a diferenca</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, repellat dolor? Laboriosam aliquam necessitatibus architecto molestiae cupiditate eius dignissimos odit, dolorem culpa ad dolores pariatur error accusantium voluptate eaque molestias.</p>
-                <button type="selection">Escolha</button>
+                <h1 id="dscp-title">Voce pode fazer a diferença!</h1>
+                <p>Cada gesto de generosidade faz a diferença para quem mais precisa, ajudando a construir um futuro  melhor para todos. Doe agora e seja a mudança que você deseja ver no mundo!</p>
+                <h2> Selecione uma iniciativa :</h2>
+                <select  id="selec">
+                    <option value=""select disabled> Selecione :</option>
+                    <option value="alimentação">Alimentação</option>
+                    <option value="alimentação">Saúde</option>
+                    <option value="alimentação">Transporte</option>
+                </select>
             </div>
         </aside>
 
         <article id="cont-pag">
-            <div id="transition">
-                <img src="" alt="cadeado de seguranca">
+         <div id="cade">
+                <img src="../src/assets/icons/cadeado.png" alt="cadeado de seguranca" id="cadeado">
                 <h1>Transação segura</h1>
-            </div>
+                
+         </div>
+         <div class="container">
+            <div class="left">Doar uma Vez</div>
+            <div class="right">Doar Mensalmente </div> <!-- Corrigido para "right" -->
+        </div>
+        </div>   
 
             <div id="card-pag">
                 <div class="pagamento"> 
@@ -95,7 +96,8 @@
                     <button id="valor">500</button>
                     <button id="valor">600</button>
                 </div>
-    
+            </div>
+            <div class="btn-enviar">
                 <div id="insert-value">
                     <input type="search" placeholder="$___digite seu valor :___" >
                     <button id="doar">Doar</button>
@@ -103,6 +105,7 @@
             </div>
         
         </article>
+        
 
     </section>
 

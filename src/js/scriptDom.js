@@ -202,20 +202,6 @@ function setupSubmenuEvents() {
     });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Função para fechar o menu mobile
 function closeMenuMobile() {
     const menuMobile = document.querySelector('.mobile-menu');
@@ -270,4 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (formCadastro) {
         formCadastro.addEventListener('submit', handleFormSubmit);
     }
+});
+
+const doarButton = document.querySelectorAll('.donate');
+
+doarButton.forEach(button => {
+    button.addEventListener('click', () => {
+        window.location.href = './pages/doar.html';
+    });
 });

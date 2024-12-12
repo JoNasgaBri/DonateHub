@@ -53,24 +53,88 @@ body{
 #pjt-selection{
     width: 50%;
     height: 100%;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
+}
+#dscp-title {
+    color:  #5856D6;
+    padding-left: 2vh;
+    font-size: 39px;   
 }
 
-#cont-pag{
+#description p{
+    padding: 20px; 
+
+}
+
+#description select{
+    padding: 4px; 
+    margin-bottom: 20px;
+    font-size: 20px;
+    
+}
+#description select{
+    padding: 4px; 
+    margin-bottom: 20px;
+    font-size: 20px;
+    
+}
+/* ESTILIZAÇÃO DIREITA CADEADO */
+#cont-pag {
     width: 50%;
     height: 100%;
-    background-color: pink;
+    background-color: rgb(216, 216, 216);
+    font-size: 5px;
+    object-fit: center;
+   
+}
+#cade{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#cade h1{
+    margin: 0;
+        font-size: 25px;
+        padding: 9px;
+        
+        
+}
+#cadeado{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    
 }
 
 #container-img{
     width: 100%;
     height: 50%;
-    background-color: black;
 }
 
 #img{
     width: 100%;
-    height: 100%;
+    height: 90%;
+object-fit: cover;
+}
+
+#description h2{
+font-size: 28px;
+padding: 29px;
+}
+#description select{
+  height: 50px;
+  width: 35%;
+  border-radius: 30px;
+  
+}
+#selec{
+margin-left: 30%;
+background-color:rgb(216, 216, 216);
+}
+
+aside select{
+    align-items: center;
 }
 
 #transition{
@@ -78,12 +142,95 @@ body{
     height: 50%;
     background-color: yellow;
 }
+#transition h1{
+    font-size: 60px;
+}
 
 #card-pag{
     width: 100%;
     height: 80%;
-    background-color: purple;
+    background-color: rgb(216, 216, 216);
+    position: relative;
+    top: -30px;
 }
+#card-pag{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    gap: 5px; 
+    padding: 90px;
+
+}
+
+.pagamento button{
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: 60%;
+    width: 90px;
+    font-size: 15px;
+}
+.pagamento {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto); 
+    gap: 20px; 
+    padding: 20px;
+    
+  }
+  
+  
+/* botao duplo */
+.container {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 310px;
+    border-radius: 50px;
+    font-size: 17px;
+    margin-left: 16vh;
+    padding: 0.9rem;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 2px 3px #3a3939;
+    position: relative;
+    z-index: 1;
+    
+  }
+  
+  .container::before {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left {
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .right {
+    border-radius: 0 50px 50px 0;
+  }
+  
+  .left:hover,
+  .right:hover {
+    background-color:rgb(216, 216, 216);
+    cursor: pointer;
+  }
+  
+ 
 /* section{
     display: flex;
     flex-direction: row;
@@ -105,3 +252,5 @@ aside{
     height: 100%;
     background-color: aliceblue;
  } */
+
+ 
