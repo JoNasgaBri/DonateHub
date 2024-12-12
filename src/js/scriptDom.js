@@ -1,5 +1,8 @@
 import { User } from './user.js';
 
+// Make menuShow available globally
+window.menuShow = menuShow;
+
 // Função corrigida para alternar a visibilidade do submenu
 export function toggleMenu() {
     const subMenu = document.getElementById("subMenu");
@@ -22,6 +25,7 @@ function loadUserData() {
             // Elementos para manipular
             const userPic = document.querySelector('.user-pic');
             const btnCadastrar = document.getElementById('btn-cadastrar');
+            const btnCadastrarMobile = document.getElementById('btn-cadastrar-mobile');
             const userNameElement = document.querySelector('.sub-menu h2');
 
             // Atualiza ícone do usuário
@@ -29,9 +33,12 @@ function loadUserData() {
                 userPic.style.display = 'block';
             }
 
-            // Esconde botão de cadastro
+            // Esconde botões de cadastro
             if (btnCadastrar) {
                 btnCadastrar.style.display = 'none';
+            }
+            if (btnCadastrarMobile) {
+                btnCadastrarMobile.style.display = 'none';
             }
 
             // Atualiza nome do usuário no submenu
@@ -76,46 +83,52 @@ function handleFormSubmit(event) {
         alert('Erro ao realizar cadastro. Tente novamente.');
     }
 }
-// Função atualizada para manipular o botão de cadastro
+// Função atualizada para manipular os botões de cadastro
 function handleCadastroButton() {
     const btnCadastrar = document.getElementById('btn-cadastrar');
-    if (!btnCadastrar) return;
+    const btnCadastrarMobile = document.getElementById('btn-cadastrar-mobile');
+    const buttons = [btnCadastrar, btnCadastrarMobile];
 
-    // Definir cores originais explicitamente
-    btnCadastrar.style.backgroundColor = '#A0F1A7'; 
-    btnCadastrar.style.color = '#1C1C1C'; 
+    buttons.forEach(btn => {
+        if (!btn) return;
 
-    btnCadastrar.addEventListener('click', () => {
-        // Salvar cores originais
-        const corOriginal = '#A0F1A7';
-        const corTextoOriginal = '#1C1C1C';
+        // Definir cores originais explicitamente
+        btn.style.backgroundColor = '#A0F1A7'; 
+        btn.style.color = '#1C1C1C'; 
 
-        // Aplicar novas cores
-        btnCadastrar.style.backgroundColor = '#48f156';
-        btnCadastrar.style.color = 'black';
-        btnCadastrar.style.transition = 'all 0.5s ease';
+        btn.addEventListener('click', () => {
+            // Salvar cores originais
+            const corOriginal = '#A0F1A7';
+            const corTextoOriginal = '#1C1C1C';
 
-        setTimeout(() => {
-            btnCadastrar.style.backgroundColor = corOriginal;
-            btnCadastrar.style.color = corTextoOriginal;
-            window.location.href = './pages/cadastro.html';
-        }, 500);
+            // Aplicar novas cores
+            btn.style.backgroundColor = '#48f156';
+            btn.style.color = 'black';
+            btn.style.transition = 'all 0.5s ease';
+
+            setTimeout(() => {
+                btn.style.backgroundColor = corOriginal;
+                btn.style.color = corTextoOriginal;
+                window.location.href = './pages/cadastro.html';
+            }, 500);
+        });
     });
 }
 
 
 function checkUserState() {
     const btnCadastrar = document.getElementById('btn-cadastrar');
+    const btnCadastrarMobile = document.getElementById('btn-cadastrar-mobile');
     const userPic = document.querySelector('.user-pic');
     const usuarioCadastrado = localStorage.getItem('usuarioCadastrado');
-
-    console.log("Checking user state..."); 
-    console.log("Usuario cadastrado:", usuarioCadastrado);
 
     if (usuarioCadastrado === 'true') {
         // Usuário cadastrado
         if (btnCadastrar) {
-            btnCadastrar.style.display = 'none'; // Esconde botão de cadastro
+            btnCadastrar.style.display = 'none'; // Esconde botão de cadastro desktop
+        }
+        if (btnCadastrarMobile) {
+            btnCadastrarMobile.style.display = 'none'; // Esconde botão de cadastro mobile
         }
         if (userPic) {
             userPic.style.display = 'block'; // Mostra ícone do usuário
@@ -123,7 +136,10 @@ function checkUserState() {
     } else {
         // Usuário não cadastrado
         if (btnCadastrar) {
-            btnCadastrar.style.display = 'block'; // Mostra botão de cadastro
+            btnCadastrar.style.display = 'block'; // Mostra botão de cadastro desktop
+        }
+        if (btnCadastrarMobile) {
+            btnCadastrarMobile.style.display = 'block'; // Mostra botão de cadastro mobile
         }
         if (userPic) {
             userPic.style.display = 'none'; // Esconde ícone do usuário
@@ -186,10 +202,52 @@ function setupSubmenuEvents() {
     });
 }
 
+// Função para fechar o menu mobile
+function closeMenuMobile() {
+    const menuMobile = document.querySelector('.mobile-menu');
+    menuMobile.classList.remove('open');
+    document.querySelector('.icon').src = "../src/assets/icons/menu_white_36dp.svg";
+}
+
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        closeMenuMobile();
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "../src/assets/icons/close_white_36dp.svg";
+    }
+}
+
+// Adiciona os event listeners do menu mobile na inicialização
+function setupMobileMenu() {
+    const menuMobile = document.querySelector('.mobile-menu');
+    const menuIcon = document.querySelector('.mobile-menu-icon');
+    const mobileLinks = menuMobile.querySelectorAll('a, button');
+    
+    // Adiciona evento de clique no ícone do menu
+    menuIcon.addEventListener('click', menuShow);
+    
+    // Adiciona evento de clique nos links do menu
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenuMobile);
+    });
+
+    // Adiciona evento para fechar o menu quando clicar fora
+    document.addEventListener('click', (e) => {
+        if (menuMobile.classList.contains('open') && 
+            !menuMobile.contains(e.target) && 
+            !menuIcon.contains(e.target)) {
+            closeMenuMobile();
+        }
+    });
+}
+
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
     handleCadastroButton();
     setupSubmenuEvents();
+    setupMobileMenu();
     loadUserData();
     checkUserState();
     
