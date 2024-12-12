@@ -53,7 +53,7 @@ body{
 #pjt-selection{
     width: 50%;
     height: 100%;
-    background-color:  #f4ecff;
+    background-color: rgb(255, 255, 255);
 }
 #dscp-title {
     color:  #5856D6;
@@ -82,7 +82,7 @@ body{
 #cont-pag {
     width: 50%;
     height: 100%;
-    background-color: #f4ecff;
+    background-color: rgb(216, 216, 216);
     font-size: 5px;
     object-fit: center;
    
@@ -90,11 +90,14 @@ body{
 #cade{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 #cade h1{
     margin: 0;
         font-size: 25px;
         padding: 9px;
+        
         
 }
 #cadeado{
@@ -127,7 +130,7 @@ padding: 29px;
 }
 #selec{
 margin-left: 30%;
-background-color: #ddcbf7b4;
+background-color:rgb(216, 216, 216);
 }
 
 aside select{
@@ -146,7 +149,9 @@ aside select{
 #card-pag{
     width: 100%;
     height: 80%;
-    background-color: purple;
+    background-color: rgb(216, 216, 216);
+    position: relative;
+    top: -30px;
 }
 #card-pag{
     display: grid;
@@ -170,19 +175,61 @@ aside select{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto); 
     gap: 20px; 
-    padding-top: 50px;
-    z-index: 1;
+    padding: 20px;
+    
   }
   
-  #insert-value{
+  
+/* botao duplo */
+.container {
     display: flex;
-    padding: 3px;
-    margin: 20PX;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: space-between;
-    z-index: 2;
+    background-color: rgb(255, 255, 255);
+    width: 310px;
+    border-radius: 50px;
+    font-size: 17px;
+    margin-left: 16vh;
+    padding: 0.9rem;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 2px 3px #3a3939;
+    position: relative;
+    z-index: 1;
+    
   }
+  
+  .container::before {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+  }
+  
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left {
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .right {
+    border-radius: 0 50px 50px 0;
+  }
+  
+  .left:hover,
+  .right:hover {
+    background-color:rgb(216, 216, 216);
+    cursor: pointer;
+  }
+  
  
 /* section{
     display: flex;
