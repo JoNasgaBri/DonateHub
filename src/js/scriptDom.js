@@ -199,3 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
         formCadastro.addEventListener('submit', handleFormSubmit);
     }
 });
+
+const doarButton = document.querySelectorAll('.donate');
+
+doarButton.forEach(button => {
+    button.addEventListener('click', () => {
+        window.location.href = './pages/doar.html';
+    });
+});
