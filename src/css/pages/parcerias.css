@@ -56,4 +56,111 @@ body{
     object-position: center;
 }
 
+body {
+    background-color: var(--color3);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagens das empresas, aside, article */
+.imagens-empresas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aside-content {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empresas {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-content {
+    width: 50%;
+    height: 100%;
+    background-color: var(--color6);
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+#img-IBM {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center;
+}
+
+#img-Google {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .empresas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .aside-content, .article-content {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .imagens-empresas {
+        height: 50vh;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .empresas {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .aside-content, .article-content {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .article-content {
+        text-align: left;
+        padding: 1rem;
+    }
+
+    .imagens-empresas {
+        height: 40vh;
+    }
+
+    #img-IBM, #img-Google {
+        width: 100%;
+        height: auto;
+    }
+}
 /* Imagens das empresas, aside, article */

@@ -21,11 +21,13 @@ body{
     height: 100vh;
 }
 
-#diferente{
-    background-image: url(/src/assets/images/criancas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: blur(10px);
+#back-criancas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
 }
 
 #texto-introducao{
@@ -110,7 +112,6 @@ body{
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
-    gap: 1rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,36 +125,99 @@ body{
 }
 
 .descricao-conteudo{
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
+    background-color: black;
     height: auto;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0));
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0)); */
     backdrop-filter: blur(2px);
     color: var(--cor-header);
-    opacity: 0;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    /* opacity: 0; */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 
 .descricao-conteudo:hover{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.685), rgba(0, 0, 0, 0.288));
-    opacity: 100%;
     cursor: pointer;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 4s;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
 }
 
-#fundador1{
-    background-image: url(/src/assets/images/marcos.jpg);
+.fundo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-#fundador2{
-    background-image: url(/src/assets/images/ana.jpg);
+/* Responsividade para Tablet e Celular */
+@media screen and (max-width: 1024px) {
+    /* Ajustes gerais para tablet */
+    .section {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .aside-content,
+    .article-content {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    #texto-introducao {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+
+    #cards-fundadores {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cards {
+        width: 80%;
+        margin: 1rem auto;
+    }
+
+    .descricao-conteudo {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
 }
 
-#fundador3{
-    background-image: url(/src/assets/images/lucas.jpg);
-}
+@media screen and (max-width: 768px) {
+    /* Ajustes específicos para celular */
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
 
-#fundador4{
-    background-image: url(/src/assets/images/renata.jpg);
-}
+    .section {
+        padding: 1rem;
+    }
 
+    #texto-introducao {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .cards {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .descricao-conteudo {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    #diferente {
+        background-position: center;
+        background-size: contain;
+    }
+
+    .aside-img {
+        height: auto;
+    }
+}
