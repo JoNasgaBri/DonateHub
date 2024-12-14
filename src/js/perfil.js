@@ -12,17 +12,41 @@ class Dashboard {
             // Atualiza as informações no perfil
             const profileSection = document.getElementById('profile');
             if (profileSection) {
-                // Calcula o total doado
-                const totalDonated = this.user.donations ? this.user.donations.reduce((total, donation) => total + donation.value, 0) : 0;
+                // Agrupa doações por tipo de projeto
+                const donationsByProject = {};
+                let totalDonated = 0;
+
+                if (this.user.donations) {
+                    this.user.donations.forEach(donation => {
+                        if (!donationsByProject[donation.project]) {
+                            donationsByProject[donation.project] = {
+                                total: 0,
+                                donations: [],
+                                projectName: donation.projectName || donation.project
+                            };
+                        }
+                        donationsByProject[donation.project].donations.push(donation);
+                        donationsByProject[donation.project].total += donation.value;
+                        totalDonated += donation.value;
+                    });
+                }
+
                 const formattedTotal = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalDonated);
 
-                // Cria o HTML do histórico de doações
-                const donationHistory = this.user.donations && this.user.donations.length > 0
-                    ? this.user.donations.map(donation => `
-                        <div class="donation-item">
-                            <span class="donation-value">${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(donation.value)}</span>
-                            <span class="donation-project">${donation.project}</span>
-                            <span class="donation-date">${new Date(donation.date).toLocaleDateString('pt-BR')}</span>
+                // Criado o HTML do histórico de doações agrupado por projeto
+                const donationHistory = Object.keys(donationsByProject).length > 0
+                    ? Object.entries(donationsByProject).map(([project, data]) => `
+                        <div class="project-donations">
+                            <h4>${data.projectName}</h4>
+                            <div class="project-total">
+                                Total doado: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(data.total)}
+                            </div>
+                            ${data.donations.map(donation => `
+                                <div class="donation-item">
+                                    <span class="donation-value">${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(donation.value)}</span>
+                                    <span class="donation-date">${new Date(donation.date).toLocaleDateString('pt-BR')}</span>
+                                </div>
+                            `).join('')}
                         </div>
                     `).join('')
                     : '<p>Nenhuma doação realizada ainda.</p>';
@@ -98,9 +122,9 @@ class Dashboard {
     }
 }
 
-// Inicialização quando a página carrega
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Tenta carregar os dados do usuário da URL
+   
     const urlParams = new URLSearchParams(window.location.search);
     const nome = urlParams.get('nome');
     const telefone = urlParams.get('telefone');
@@ -108,12 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cep = urlParams.get('cep');
     const cpf = urlParams.get('cpf');
 
-    // Se tiver dados na URL, cria um novo usuário
+  
     if (nome && email) {
         const user = new User(nome, email, telefone, cep, cpf);
-        user.save(); // Salva no localStorage
+        user.save(); 
         
-        // Cria o dashboard com o usuário
+       
         const dashboard = new Dashboard(user);
         dashboard.loadActivities();
     } else {
