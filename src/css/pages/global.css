@@ -160,7 +160,7 @@ button{
 #header-principal{
     background-color: var(--color1);
     height: 12vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -172,9 +172,40 @@ button{
     text-decoration: none;
 }
 
-.h1-header{
+@keyframes titleAnimation {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+    25% {
+        transform: scale(1.02);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                     0 0 30px var(--color8);
+    }
+    75% {
+        transform: scale(1.02);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+.h1-header {
     color: var(--cor-header);
     font-size: var(--titulo);
+    animation: titleAnimation 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.h1-header:hover {
+    color: var(--color6);
+    cursor: pointer;
 }
 
 ul li{
@@ -201,7 +232,7 @@ ul li{
     align-items: center;
     justify-content: center;
     border-radius: 25px;
-    padding: .8rem;
+    padding: .5rem;
     width: 7rem;
     height: 2.5rem;
     color: var(--cor-texto);
@@ -209,6 +240,8 @@ ul li{
     border: solid 2px black;
     font-size: var(--texto);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    margin-right: 2rem;
 }
 
 #btn-cadastrar:hover{
@@ -238,6 +271,7 @@ ul li{
     border-radius: 20%;
     cursor: pointer;
     margin-left: 30px;
+    margin-right: 2rem;
 }
 
 nav ul {
@@ -253,12 +287,13 @@ nav ul li {
 
 .sub-menu-wrap {
     position: absolute;
-    top: 11%;
-    right: 10%;
+    top: 100%;
+    right: 2rem;
     width: 320px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
+    z-index: 9999;
 }
 
 .sub-menu-wrap.open-menu {
@@ -266,11 +301,14 @@ nav ul li {
 }
 
 .sub-menu {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 9999;
 }
 
 .user-info {
@@ -405,5 +443,70 @@ nav ul li {
 
     #btn-cadastrar{
         display: block;
+    }
+
+    /* Ajustes responsivos para o submenu */
+    .sub-menu-wrap {
+        width: 90%;
+        right: 5%;
+        left: 5%;
+    }
+
+    .sub-menu {
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-info img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .user-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .sub-menu-link {
+        padding: 8px 0;
+    }
+
+    .sub-menu-link img {
+        width: 30px;
+        padding: 5px;
+    }
+
+    .sub-menu-link p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 480px) {
+    .sub-menu-wrap {
+        width: 95%;
+        right: 2.5%;
+        left: 2.5%;
+    }
+
+    .sub-menu {
+        padding: 10px;
+    }
+
+    .user-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .sub-menu-link img {
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .sub-menu-link p {
+        font-size: 0.9rem;
     }
 }

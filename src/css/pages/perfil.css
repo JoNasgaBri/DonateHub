@@ -6,69 +6,114 @@ main {
 
 #profile {
     background-color: #fff;
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
+#profile h2 {
+    font-size: 2.5rem;
+    color: #4B44F4;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 3px solid #4B44F4;
+}
+
 .info-item {
-    margin-bottom: 1rem;
-    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
     border-bottom: 1px solid #f0f0f0;
+    font-size: 1.1rem;
 }
 
 .info-item strong {
     display: inline-block;
-    width: 100px;
+    width: 120px;
     color: #4a4a4a;
+    font-size: 1.2rem;
 }
 
 /* Estilos para a seção de doações */
 .donations-section {
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding-top: 2rem;
     border-top: 2px solid #f0f0f0;
 }
 
 .donations-section h3 {
     color: #4B44F4;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 .total-donated {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
+    background-color: #4B44F4;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.5rem;
 }
 
 .total-donated strong {
-    color: #4a4a4a;
-    font-size: 1.1rem;
+    color: white;
+    font-size: 1.5rem;
 }
 
 .total-donated span {
-    color: #4B44F4;
-    font-size: 1.2rem;
+    color: white;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
 .donation-history h4 {
-    color: #4a4a4a;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    color: #4B44F4;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #4B44F4;
+}
+
+.project-donations {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-donations h4 {
+    color: #4B44F4;
+    margin: 0 0 2rem 0;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #4B44F4;
+    padding-bottom: 1rem;
+}
+
+.project-total {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
 }
 
 .donation-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
+    background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     margin-bottom: 0.5rem;
@@ -78,21 +123,43 @@ main {
 .donation-item:hover {
     background-color: #f8f9fa;
     transform: translateX(5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .donation-value {
     color: #4B44F4;
     font-weight: bold;
-}
-
-.donation-project {
-    color: #4a4a4a;
+    font-size: 1.3em;
 }
 
 .donation-date {
     color: #6c757d;
-    text-align: right;
+    font-size: 1.1em;
 }
+
+.total-donated {
+    background-color: #4B44F4;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.total-donated strong {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.total-donated span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 
 #activity {
     background-color: #fff;
@@ -138,6 +205,8 @@ main {
     .donation-item {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 0.5rem;
+        flex-direction: column;
     }
 
     .donation-date {
@@ -148,5 +217,17 @@ main {
         width: 100%;
         display: block;
         margin-bottom: 0.5rem;
+    }
+
+    .donation-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .project-total {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
 }

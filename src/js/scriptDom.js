@@ -1,7 +1,6 @@
 import { User } from './user.js';
 
-// Make menuShow available globally
-window.menuShow = menuShow;
+
 
 // Função corrigida para alternar a visibilidade do submenu
 export function toggleMenu() {
@@ -96,24 +95,24 @@ function checkUserState() {
     if (usuarioCadastrado === 'true') {
         // Usuário cadastrado
         if (btnCadastrar) {
-            btnCadastrar.style.display = 'none'; // Esconde botão de cadastro desktop
+            btnCadastrar.style.display = 'none'; 
         }
         if (btnCadastrarMobile) {
-            btnCadastrarMobile.style.display = 'none'; // Esconde botão de cadastro mobile
+            btnCadastrarMobile.style.display = 'none';
         }
         if (userPic) {
-            userPic.style.display = 'block'; // Mostra ícone do usuário
+            userPic.style.display = 'block'; 
         }
     } else {
         // Usuário não cadastrado
         if (btnCadastrar) {
-            btnCadastrar.style.display = 'block'; // Mostra botão de cadastro desktop
+            btnCadastrar.style.display = 'block'; 
         }
         if (btnCadastrarMobile) {
-            btnCadastrarMobile.style.display = 'block'; // Mostra botão de cadastro mobile
+            btnCadastrarMobile.style.display = 'block'; 
         }
         if (userPic) {
-            userPic.style.display = 'none'; // Esconde ícone do usuário
+            userPic.style.display = 'none'; 
         }
     }
 }
@@ -128,7 +127,7 @@ function setupSubmenuEvents() {
     if (userPic) {
         userPic.style.display = usuarioCadastrado ? 'block' : 'none';
         
-        // Adicionar evento de clique no ícone do usuário
+        
         userPic.addEventListener('click', () => {
             toggleMenu();
         });
@@ -229,12 +228,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Configuração dos botões de doação por categoria
 const doarButton = document.querySelectorAll('.donate');
-
 doarButton.forEach(button => {
     button.addEventListener('click', () => {
+        const category = button.closest('.category-card').classList[1]; // pega a classe da categoria (animals, food, education)
+        const categoryMap = {
+            'animals': 'animais',
+            'food': 'alimentacao',
+            'education': 'saude'
+        };
+        
+        const projectType = categoryMap[category];
         const isInPagesDirectory = window.location.pathname.includes('/pages/');
-        const doarPath = isInPagesDirectory ? 'doar.html' : 'pages/doar.html';
+        const doarPath = isInPagesDirectory ? `doar.html?type=${projectType}` : `pages/doar.html?type=${projectType}`;
         window.location.href = doarPath;
     });
 });
+
+// Configuração dos botões principais
+window.clicado2 = function() { // Função Doar Agora
+    const isInPagesDirectory = window.location.pathname.includes('/pages/');
+    const doacoesPath = isInPagesDirectory ? 'doacoes.html' : 'pages/doacoes.html';
+    window.location.href = doacoesPath;
+};
+
+window.clicado3 = function() { // Função Saber Mais
+    const isInPagesDirectory = window.location.pathname.includes('/pages/');
+    const sobrePath = isInPagesDirectory ? 'sobre.html' : 'pages/sobre.html';
+    window.location.href = sobrePath;
+};
