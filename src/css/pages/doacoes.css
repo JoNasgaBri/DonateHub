@@ -1,18 +1,17 @@
-/* General */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
+
 body {
     background-color: var(--color3);
     height: 100vh;
     width: 100vw;
 }
 
-/* Donation Section */
+
 .donation-section {
     padding: 50px 0;
     background-color: var(--color2);
@@ -25,7 +24,7 @@ body {
     color: var(--color1);
 }
 
-/* Donation Button */
+
 .btn-doar {
     background-color: var(--color8);
     color: black;
@@ -146,23 +145,125 @@ body {
 .next-btn {
     right: 10px;
 }
-
-/* Responsividade */
+/* Estilos gerais para mobile */
 @media (max-width: 768px) {
-    .btn-doar, .btn-cadastrar {
-        padding: 12px 25px;
-        font-size: 1rem;
+    
+    #header-principal {
+        background-color: #6B5FF7;
+        padding: 15px;
+        text-align: center;
     }
 
-    .donation-section h2 {
-        font-size: 1.5rem;
+    .logo {
+        font-size: 24px;
+        color: white;
+        margin-bottom: 10px;
     }
 
-    .carousel-container {
-        height: auto;
+    .btn-cadastrar {
+        display: inline-block;
+        padding: 8px 20px;
+        margin: 5px auto;
+        font-size: 16px;
+        border-radius: 20px;
     }
 
+    /* Ajustes do Carousel */
     .slide {
-        height: 300px;
+        height: 400px;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .slide-content {
+        margin: 0;
+        padding: 20px;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+    }
+
+    .slide-content h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .btn-doar {
+        padding: 8px 20px;
+        font-size: 16px;
+        width: auto;
+        display: inline-block;
+    }
+
+    /* Footer responsivo */
+    #footer {
+        padding: 20px;
+        background-color: black;
+        color: white;
+    }
+
+    #informacoes {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .infos {
+        text-align: left;
+        padding: 0 15px;
+    }
+
+    .infos h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .infos p {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 12px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ajustes de espaçamento e margens */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .slide-content h2 {
+        font-size: 18px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+
+    .btn-doar, .btn-cadastrar {
+        font-size: 14px;
+        padding: 6px 16px;
     }
 }
